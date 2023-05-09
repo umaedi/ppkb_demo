@@ -8,7 +8,7 @@
                 </a>
             </div>
             <div class="pageTitle">
-                <img src="assets/img/logo.png" alt="logo" class="logo">
+                <img src="{{ asset('assets/tpk/img/logo.png') }}" alt="logo" class="logo">
             </div>
             <div class="right">
                 <a href="app-notifications.html" class="headerButton">
@@ -16,7 +16,7 @@
                     <span class="badge badge-danger">4</span>
                 </a>
                 <a href="app-settings.html" class="headerButton">
-                    <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="imaged w32">
+                    <img src="{{ asset('assets/tpk/img/sample/avatar/avatar1.jpg') }}" alt="image" class="imaged w32">
                     <span class="badge badge-danger">6</span>
                 </a>
             </div>
@@ -337,7 +337,7 @@
                     <!-- item -->
                     <a href="app-transaction-detail.html" class="item">
                         <div class="detail">
-                            <img src="assets/img/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
+                            <img src="{{ asset('assets/tpk') }}/img/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
                             <div>
                                 <strong>Amazon</strong>
                                 <p>Shopping</p>
@@ -351,7 +351,7 @@
                     <!-- item -->
                     <a href="app-transaction-detail.html" class="item">
                         <div class="detail">
-                            <img src="assets/img/sample/brand/2.jpg" alt="img" class="image-block imaged w48">
+                            <img src="{{ asset('assets/tpk') }}/img/sample/brand/2.jpg" alt="img" class="image-block imaged w48">
                             <div>
                                 <strong>Apple</strong>
                                 <p>Appstore Purchase</p>
@@ -365,7 +365,7 @@
                     <!-- item -->
                     <a href="app-transaction-detail.html" class="item">
                         <div class="detail">
-                            <img src="assets/img/sample/avatar/avatar3.jpg" alt="img" class="image-block imaged w48">
+                            <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar3.jpg" alt="img" class="image-block imaged w48">
                             <div>
                                 <strong>Alex Ljung</strong>
                                 <p>Transfer</p>
@@ -379,7 +379,7 @@
                     <!-- item -->
                     <a href="app-transaction-detail.html" class="item">
                         <div class="detail">
-                            <img src="assets/img/sample/avatar/avatar4.jpg" alt="img" class="image-block imaged w48">
+                            <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar4.jpg" alt="img" class="image-block imaged w48">
                             <div>
                                 <strong>Beatriz Brito</strong>
                                 <p>Transfer</p>
@@ -562,7 +562,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar2.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar2.jpg" alt="img" class="imaged w-100">
                                         <strong>Jurrien</strong>
                                     </div>
                                 </a>
@@ -570,7 +570,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar3.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar3.jpg" alt="img" class="imaged w-100">
                                         <strong>Elwin</strong>
                                     </div>
                                 </a>
@@ -578,7 +578,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar4.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar4.jpg" alt="img" class="imaged w-100">
                                         <strong>Alma</strong>
                                     </div>
                                 </a>
@@ -586,7 +586,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar5.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar5.jpg" alt="img" class="imaged w-100">
                                         <strong>Justine</strong>
                                     </div>
                                 </a>
@@ -594,7 +594,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar6.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar6.jpg" alt="img" class="imaged w-100">
                                         <strong>Maria</strong>
                                     </div>
                                 </a>
@@ -602,7 +602,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar7.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar7.jpg" alt="img" class="imaged w-100">
                                         <strong>Pamela</strong>
                                     </div>
                                 </a>
@@ -610,7 +610,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar8.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar8.jpg" alt="img" class="imaged w-100">
                                         <strong>Neville</strong>
                                     </div>
                                 </a>
@@ -618,7 +618,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar9.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar9.jpg" alt="img" class="imaged w-100">
                                         <strong>Alex</strong>
                                     </div>
                                 </a>
@@ -626,7 +626,7 @@
                             <li class="splide__slide">
                                 <a href="#">
                                     <div class="user-card">
-                                        <img src="assets/img/sample/avatar/avatar10.jpg" alt="img" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar10.jpg" alt="img" class="imaged w-100">
                                         <strong>Stina</strong>
                                     </div>
                                 </a>
@@ -652,7 +652,7 @@
                             <li class="splide__slide">
                                 <div class="bill-box">
                                     <div class="img-wrapper">
-                                        <img src="assets/img/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
                                     </div>
                                     <div class="price">$ 14</div>
                                     <p>Prime Monthly Subscription</p>
@@ -663,7 +663,7 @@
                             <li class="splide__slide">
                                 <div class="bill-box">
                                     <div class="img-wrapper">
-                                        <img src="assets/img/sample/brand/2.jpg" alt="img" class="image-block imaged w48">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/brand/2.jpg" alt="img" class="image-block imaged w48">
                                     </div>
                                     <div class="price">$ 9</div>
                                     <p>Music Monthly Subscription</p>
@@ -778,7 +778,7 @@
                             <li class="splide__slide">
                                 <a href="app-blog-post.html">
                                     <div class="blog-card">
-                                        <img src="assets/img/sample/photo/1.jpg" alt="image" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/1.jpg" alt="image" class="imaged w-100">
                                         <div class="text">
                                             <h4 class="title">What will be the value of bitcoin in the next...</h4>
                                         </div>
@@ -789,7 +789,7 @@
                             <li class="splide__slide">
                                 <a href="app-blog-post.html">
                                     <div class="blog-card">
-                                        <img src="assets/img/sample/photo/2.jpg" alt="image" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/2.jpg" alt="image" class="imaged w-100">
                                         <div class="text">
                                             <h4 class="title">Rules you need to know in business</h4>
                                         </div>
@@ -800,7 +800,7 @@
                             <li class="splide__slide">
                                 <a href="app-blog-post.html">
                                     <div class="blog-card">
-                                        <img src="assets/img/sample/photo/3.jpg" alt="image" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/3.jpg" alt="image" class="imaged w-100">
                                         <div class="text">
                                             <h4 class="title">10 easy ways to save your money</h4>
                                         </div>
@@ -811,7 +811,7 @@
                             <li class="splide__slide">
                                 <a href="app-blog-post.html">
                                     <div class="blog-card">
-                                        <img src="assets/img/sample/photo/4.jpg" alt="image" class="imaged w-100">
+                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/4.jpg" alt="image" class="imaged w-100">
                                         <div class="text">
                                             <h4 class="title">Follow the financial agenda with...</h4>
                                         </div>
@@ -884,7 +884,7 @@
                         <!-- profile box -->
                         <div class="profileBox pt-2 pb-2">
                             <div class="image-wrapper">
-                                <img src="assets/img/sample/avatar/avatar1.jpg" alt="image" class="imaged  w36">
+                                <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar1.jpg" alt="image" class="imaged  w36">
                             </div>
                             <div class="in">
                                 <strong>Sebastian Doe</strong>
@@ -1031,7 +1031,7 @@
                         <ul class="listview image-listview flush transparent no-line">
                             <li>
                                 <a href="#" class="item">
-                                    <img src="assets/img/sample/avatar/avatar2.jpg" alt="image" class="image">
+                                    <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar2.jpg" alt="image" class="image">
                                     <div class="in">
                                         <div>Artem Sazonov</div>
                                     </div>
@@ -1039,7 +1039,7 @@
                             </li>
                             <li>
                                 <a href="#" class="item">
-                                    <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="image">
+                                    <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar4.jpg" alt="image" class="image">
                                     <div class="in">
                                         <div>Sophie Asveld</div>
                                     </div>
@@ -1047,7 +1047,7 @@
                             </li>
                             <li>
                                 <a href="#" class="item">
-                                    <img src="assets/img/sample/avatar/avatar3.jpg" alt="image" class="image">
+                                    <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar3.jpg" alt="image" class="image">
                                     <div class="in">
                                         <div>Kobus van de Vegte</div>
                                     </div>
@@ -1076,7 +1076,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="action-sheet-content text-center">
-                            <div class="mb-1"><img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                            <div class="mb-1"><img src="{{ asset('assets/tpk') }}/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
                             </div>
                             <div>
                                 Install <strong>Finapp</strong> on your iPhone's home screen.
@@ -1110,7 +1110,7 @@
                     <div class="modal-body">
                         <div class="action-sheet-content text-center">
                             <div class="mb-1">
-                                <img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                                <img src="{{ asset('assets/tpk') }}/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
                             </div>
                             <div>
                                 Install <strong>Finapp</strong> on your Android's home screen.
