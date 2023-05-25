@@ -33,8 +33,8 @@
                     <!-- Balance -->
                     <div class="balance">
                         <div class="left">
-                            <span class="title">Total Balance</span>
-                            <h1 class="total">$ 2,562.50</h1>
+                            <span class="title">Hallo</span>
+                            <h1 class="total">Umaedi KH</h1>
                         </div>
                         <div class="right">
                             <a href="#" class="button" data-bs-toggle="modal" data-bs-target="#depositActionSheet">
@@ -48,33 +48,33 @@
                         <div class="item">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#withdrawActionSheet">
                                 <div class="icon-wrapper bg-danger">
-                                    <ion-icon name="arrow-down-outline"></ion-icon>
+                                    <ion-icon name="add-outline"></ion-icon>
                                 </div>
-                                <strong>Withdraw</strong>
+                                <strong>Catin/CaPUS</strong>
                             </a>
                         </div>
                         <div class="item">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#sendActionSheet">
                                 <div class="icon-wrapper">
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                    <ion-icon name="add-outline"></ion-icon>
                                 </div>
-                                <strong>Send</strong>
+                                <strong>Ibu Hamil</strong>
                             </a>
                         </div>
                         <div class="item">
                             <a href="app-cards.html">
                                 <div class="icon-wrapper bg-success">
-                                    <ion-icon name="card-outline"></ion-icon>
+                                    <ion-icon name="add-outline"></ion-icon>
                                 </div>
-                                <strong>Cards</strong>
+                                <strong>Pascapersalinan</strong>
                             </a>
                         </div>
                         <div class="item">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#exchangeActionSheet">
                                 <div class="icon-wrapper bg-warning">
-                                    <ion-icon name="swap-vertical"></ion-icon>
+                                    <ion-icon name="add-outline"></ion-icon>
                                 </div>
-                                <strong>Exchange</strong>
+                                <strong>Baduta</strong>
                             </a>
                         </div>
     
@@ -132,26 +132,15 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Withdraw Money</h5>
+                            <h5 class="modal-title">Tambah Data Catin</h5>
                         </div>
                         <div class="modal-body">
                             <div class="action-sheet-content">
                                 <form>
                                     <div class="form-group basic">
                                         <div class="input-wrapper">
-                                            <label class="label" for="account2d">From</label>
-                                            <select class="form-control custom-select" id="account2d">
-                                                <option value="0">Savings (*** 5019)</option>
-                                                <option value="1">Investment (*** 6212)</option>
-                                                <option value="2">Mortgage (*** 5021)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-    
-                                    <div class="form-group basic">
-                                        <div class="input-wrapper">
-                                            <label class="label" for="text11d">To</label>
-                                            <input type="email" class="form-control" id="text11d" placeholder="Enter IBAN">
+                                            <h5 class="modal-title">BIODATA CATIN PRIA</h5>
+                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_pria">
                                             <i class="clear-input">
                                                 <ion-icon name="close-circle"></ion-icon>
                                             </i>
@@ -159,17 +148,291 @@
                                     </div>
     
                                     <div class="form-group basic">
-                                        <label class="label">Enter Amount</label>
-                                        <div class="input-group mb-2">
-                                            <span class="input-group-text" id="basic-addonb1">$</span>
-                                            <input type="text" class="form-control" placeholder="Enter an amount"
-                                                value="100">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" id="nik" placeholder="NIK" name="nik_catin_pria">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
                                         </div>
                                     </div>
-    
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" id="ttl" placeholder="Tempat Lahir" name="alamat_catin_pria">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" id="ttl" placeholder="No HP (WA)" name="no_tlp_catin_pria">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <textarea id="textarea4" rows="2" class="form-control"
+                                                placeholder="Alamat"></textarea>
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group basic">
+                                                <div class="input-wrapper">
+                                                    <select class="form-control custom-select" id="currency1">
+                                                        <option value="1">--Pilih Provinsi--</option>
+                                                        <option value="2">USD</option>
+                                                        <option value="3">AUD</option>
+                                                        <option value="4">CAD</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group basic">
+                                                <div class="input-wrapper">
+                                                    <select class="form-control custom-select" id="currency2">
+                                                        <option value="1">--Pilih Kabupaten--</option>
+                                                        <option value="1">EUR</option>
+                                                        <option value="2">AUD</option>
+                                                        <option value="3">CAD</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group basic">
+                                                <div class="input-wrapper">
+                                                    <select class="form-control custom-select" id="currency1">
+                                                        <option value="1">--Pilih Kecamatan--</option>
+                                                        <option value="2">USD</option>
+                                                        <option value="3">AUD</option>
+                                                        <option value="4">CAD</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group basic">
+                                                <div class="input-wrapper">
+                                                    <select class="form-control custom-select" id="currency2">
+                                                        <option value="1">--Pilih Kelurahan--</option>
+                                                        <option value="1">EUR</option>
+                                                        <option value="2">AUD</option>
+                                                        <option value="3">CAD</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic mt-3">
+                                        <div class="input-wrapper">
+                                            <h5 class="modal-title">BIODATA CATIN WANITA</h5>
+                                            <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="nik_2" placeholder="NIK">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" id="ttl" placeholder="Tempat Lahir">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" id="ttl" placeholder="Tanggal Lahir">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="ttl" placeholder="No HP (WA)">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <textarea id="textarea4" rows="2" class="form-control"
+                                                placeholder="Alamat"></textarea>
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label for="#">Tgl Rencana Pernikahan</label>
+                                            <input type="date" class="form-control" id="ttl" placeholder="Tgl Rencana Pernikahan">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <label for="#">Tgl Kunjungan</label>
+                                            <input type="date" class="form-control" id="ttl" placeholder="Tgl Kunjungan">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="section full mt-2 mb-2">
+                                        <h5 class="modal-title">HASIL PEMERIKSAAN KESEHATAN CATIN PRIA</h5>
+                                        <div class="wide-block p-0">
+                                            <div class="section-title">Apakah Merokok</div>
+                                            <div class="input-list">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="radioList" id="radioList1">
+                                                    <label class="form-check-label" for="radioList1">Ya</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="radioList" id="radioList2">
+                                                    <label class="form-check-label" for="radioList2">Tidak</label>
+                                                </div>
+                                            </div>
+                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group basic">
+                                        <h5 class="modal-title">HASIL PEMERIKSAAN KESEHATAN CATIN WANITA</h5>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="ttl" placeholder="Berat badan (kg)">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="ttl" placeholder="Tinggi Badan (cm)">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="ttl" placeholder="Index Masa Tumbuh">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="ttl" placeholder="Kadar HB (g/dl)">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input type="number" class="form-control" id="ttl" placeholder="Ukuran Lila (cm)">
+                                            <i class="clear-input">
+                                                <ion-icon name="close-circle"></ion-icon>
+                                            </i>
+                                        </div>
+                                        <div class="wide-block p-0">
+                                            <div class="section-title">Apakah Terpadar Rokok</div>
+                                            <div class="input-list">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="radioList" id="radioList1">
+                                                    <label class="form-check-label" for="radioList1">Ya</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="radioList" id="radioList2">
+                                                    <label class="form-check-label" for="radioList2">Tidak</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section full mt-2 mb-2">
+                                            <h5 class="modal-title">PENDAMPINGAN CATIN PRIA</h5>
+                                            <div class="wide-block p-0">
+                                                <div class="section-title">Memberikan penyuluhan/KIE</div>
+                                                <div class="input-list">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList1">
+                                                        <label class="form-check-label" for="radioList1">Ya</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList2">
+                                                        <label class="form-check-label" for="radioList2">Tidak</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section full mt-2 mb-2">
+                                            <h5 class="modal-title">PENDAMPINGAN CATIN WANITA</h5>
+                                            <div class="wide-block p-0">
+                                                <div class="section-title">Memberikan penyuluhan/KIE</div>
+                                                <div class="input-list">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList1">
+                                                        <label class="form-check-label" for="radioList1">Ya</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList2">
+                                                        <label class="form-check-label" for="radioList2">Tidak</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wide-block p-0">
+                                                <div class="section-title">Apakah (sasaran) sudah mendapatkan suplemen makanan?</div>
+                                                <div class="input-list">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList1">
+                                                        <label class="form-check-label" for="radioList1">Ya</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList2">
+                                                        <label class="form-check-label" for="radioList2">Tidak</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wide-block p-0">
+                                                <div class="section-title">Memfasilitasi rujukan layanan</div>
+                                                <div class="input-list">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList1">
+                                                        <label class="form-check-label" for="radioList1">Ya</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="radioList" id="radioList2">
+                                                        <label class="form-check-label" for="radioList2">Tidak</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group basic">
+                                            <div class="input-wrapper">
+                                                <textarea id="textarea4" rows="2" class="form-control"
+                                                    placeholder="Catatan"></textarea>
+                                                <i class="clear-input">
+                                                    <ion-icon name="close-circle"></ion-icon>
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-group basic">
                                         <button type="button" class="btn btn-primary btn-block btn-lg"
-                                            data-bs-dismiss="modal">Withdraw</button>
+                                            data-bs-dismiss="modal">Simpan</button>
                                     </div>
                                 </form>
                             </div>
@@ -299,28 +562,28 @@
                 <div class="row mt-2">
                     <div class="col-6">
                         <div class="stat-box">
-                            <div class="title">Income</div>
-                            <div class="value text-success">$ 552.95</div>
+                            <div class="title">CATIN</div>
+                            <div class="value text-success">0</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
-                            <div class="title">Expenses</div>
-                            <div class="value text-danger">$ 86.45</div>
+                            <div class="title">PAUS</div>
+                            <div class="value text-danger">20</div>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-6">
                         <div class="stat-box">
-                            <div class="title">Total Bills</div>
-                            <div class="value">$ 53.25</div>
+                            <div class="title">BUMIL</div>
+                            <div class="value">5</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
-                            <div class="title">Savings</div>
-                            <div class="value">$ 120.99</div>
+                            <div class="title">BADUTA</div>
+                            <div class="value">6</div>
                         </div>
                     </div>
                 </div>
