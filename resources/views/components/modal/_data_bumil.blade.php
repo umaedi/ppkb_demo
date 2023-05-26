@@ -34,6 +34,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
+                                <label for="">Tgl Lahir Ibu</label>
                                 <input type="date" class="form-control" id="ttl" placeholder="Tgl Lahir Ibu" name="no_tlp_catin_pria">
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
@@ -152,12 +153,12 @@
                                 <div class="section-title">Apakah Terpadar Rokok</div>
                                 <div class="input-list">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioList" id="radioList1">
-                                        <label class="form-check-label" for="radioList1">Ya</label>
+                                        <input class="form-check-input" type="radio" name="radioList" id="radioList7">
+                                        <label class="form-check-label" for="radioList7">Ya</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioList" id="radioList1.1">
-                                        <label class="form-check-label" for="radioList1.1">Tidak</label>
+                                        <input class="form-check-input" type="radio" name="radioList" id="radioList7.1">
+                                        <label class="form-check-label" for="radioList7.1">Tidak</label>
                                     </div>
                                 </div>
                 
@@ -172,12 +173,12 @@
                                     <div class="section-title">Memberikan Penyuluhan/KIE</div>
                                     <div class="input-list">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioList" id="radioList1">
-                                            <label class="form-check-label" for="radioList1">Ya</label>
+                                            <input class="form-check-input" type="radio" name="radioList" id="radioList8">
+                                            <label class="form-check-label" for="radioList8">Ya</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioList" id="radioList1.1">
-                                            <label class="form-check-label" for="radioList1.1">Tidak</label>
+                                            <input class="form-check-input" type="radio" name="radioList" id="radioList8.1">
+                                            <label class="form-check-label" for="radioList8.1">Tidak</label>
                                         </div>
                                     </div>
                     
@@ -188,12 +189,12 @@
                                 <div class="section-title">Apakah Ibu Hamil Sudah Mendapatkan Suplemen Tambahan Darah</div>
                                 <div class="input-list">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioList" id="radioList2">
-                                        <label class="form-check-label" for="radioList2">Ya</label>
+                                        <input class="form-check-input" type="radio" name="radioList" id="radioList9">
+                                        <label class="form-check-label" for="radioList9">Ya</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="radioList" id="radioList2.1">
-                                        <label class="form-check-label" for="radioList2.1">Tidak</label>
+                                        <input class="form-check-input" type="radio" name="radioList" id="radioList9.1">
+                                        <label class="form-check-label" for="radioList9.1">Tidak</label>
                                     </div>
                                 </div>
                             </div>
@@ -203,12 +204,12 @@
                                     <div class="section-title">Memfasilitasi Pelayanan Rujukan</div>
                                     <div class="input-list">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioList" id="radioList3">
-                                            <label class="form-check-label" for="radioList3">Ya</label>
+                                            <input class="form-check-input" type="radio" name="radioList" id="radioList10">
+                                            <label class="form-check-label" for="radioList10">Ya</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioList" id="radioList3.1">
-                                            <label class="form-check-label" for="radioList3.1">Tidak</label>
+                                            <input class="form-check-input" type="radio" name="radioList" id="radioList10.1">
+                                            <label class="form-check-label" for="radioList10.1">Tidak</label>
                                         </div>
                                     </div>
                                 </div>
@@ -219,12 +220,12 @@
                                     <div class="section-title">Memfasilitasi Bantuan Sosial</div>
                                     <div class="input-list">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioList" id="radioList3">
-                                            <label class="form-check-label" for="radioList3">Ya</label>
+                                            <input class="form-check-input" type="radio" name="radioList" id="radioList11">
+                                            <label class="form-check-label" for="radioList11">Ya</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="radioList" id="radioList3.1">
-                                            <label class="form-check-label" for="radioList3.1">Tidak</label>
+                                            <input class="form-check-input" type="radio" name="radioList" id="radioList11.1">
+                                            <label class="form-check-label" for="radioList11.1">Tidak</label>
                                         </div>
                                     </div>
                                 </div>
