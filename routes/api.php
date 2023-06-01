@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('tpk')->group(function () {
+    Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
+
+    //data wilayah
+    Route::get('/wilayah', [\App\Http\Controllers\Api\Tpk\WilayahController::class, 'index']);
+
+    //data dashboard
+    Route::get('/data_dashboard', [\App\Http\Controllers\Api\Tpk\DatadashboardController::class, 'index']);
+});

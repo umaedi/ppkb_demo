@@ -22,7 +22,6 @@ Route::prefix('tpk')->group(function () {
 
     //catin
     Route::controller(\App\Http\Controllers\Tpk\CatinController::class)->group(function () {
-        Route::get('/catin', 'index');
-        Route::post('/catin/store', 'store');
+        Route::get('/catin', 'index')->name('tpk.catin.index');
     });
 });

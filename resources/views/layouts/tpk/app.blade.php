@@ -19,24 +19,31 @@
 
 <body>
 
-    <!-- loader -->
-    <div id="loader">
-        <img src="{{ asset('assets/tpk/img/logo-icon.png') }}" alt="icon" class="loading-icon">
-    </div>
-    <!-- * loader -->
-
+    @include('layouts.tpk.navbar')
     @yield('content')
+    @include('layouts.tpk.button_action')
+    @include('layouts.tpk.sidebar')
 
     <!-- Bootstrap -->
     <script src="{{ asset('assets/tpk/js/lib/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/tpk/js/jquery-3.4.1.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/tpk/js/base.js') }}"></script> --}}
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script src="{{ asset('assets/tpk/js/plugins/splide/splide.min.js') }}"></script>
-    <script src="{{ asset('assets/tpk/js/base.js') }}"></script>
-
-    <script>
-        // Add to Home with 2 seconds delay.
-        AddtoHome("2000", "once");
+    <script type="text/javascript">
+        async function transAjax(data) {
+        html = null;
+        data.headers = {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+        await $.ajax(data).done(function(res) {
+            html = res;
+        })
+            .fail(function() {
+                return false;
+            })
+        return html
+    }
     </script>
-
+    @stack('js')
 </body>
 </html>

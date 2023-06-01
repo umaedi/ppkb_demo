@@ -1,16 +1,9 @@
 @extends('layouts.tpk.app')
 @section('content')
-        <!-- App Header -->
-        @include('layouts.tpk.navbar')
-        <!-- * App Header -->
     
-        <!-- App Capsule -->
         <div id="appCapsule">
-    
-            <!-- Wallet Card -->
             <div class="section wallet-card-section pt-1">
                 <div class="wallet-card">
-                    <!-- Balance -->
                     <div class="balance">
                         <div class="left">
                             <span class="title">Hallo</span>
@@ -22,9 +15,6 @@
                             </a>
                         </div>
                     </div>
-                    <!-- * Balance -->
-
-                    <!-- Wallet Footer -->
                     <div class="wallet-footer">
                         <div class="item">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#catinCapus">
@@ -60,12 +50,9 @@
                         </div>
     
                     </div>
-                    <!-- * Wallet Footer -->
                 </div>
             </div>
-            <!-- Wallet Card -->
     
-            <!-- Deposit Action Sheet -->
             <div class="modal fade action-sheet" id="depositActionSheet" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -123,15 +110,17 @@
             <div class="section">
                 <div class="row mt-2">
                     <div class="col-6">
+                        <a href="{{ route('tpk.catin.index') }}">
                         <div class="stat-box">
                             <div class="title">CATIN</div>
-                            <div class="value text-success">0</div>
+                            <div id="data_catin" class="value text-danger">0</div>
                         </div>
+                        </a>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">PAUS</div>
-                            <div class="value text-danger">20</div>
+                            <div class="value text-success">20</div>
                         </div>
                     </div>
                 </div>
@@ -139,817 +128,71 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">BUMIL</div>
-                            <div class="value">5</div>
+                            <div class="value"><span id="data_bumil" class="text-primary">0</span></div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">BADUTA</div>
-                            <div class="value">6</div>
+                            <div class="value"><span class="text-warning">6</span></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- * Stats -->
-    
-            <!-- Transactions -->
-            <div class="section mt-4">
-                <div class="section-heading">
-                    <h2 class="title">Transactions</h2>
-                    <a href="app-transactions.html" class="link">View All</a>
-                </div>
-                <div class="transactions">
-                    <!-- item -->
-                    <a href="app-transaction-detail.html" class="item">
-                        <div class="detail">
-                            <img src="{{ asset('assets/tpk') }}/img/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
-                            <div>
-                                <strong>Amazon</strong>
-                                <p>Shopping</p>
-                            </div>
+                <div class="section my-3">
+                    <div class="section-heading">
+                        <div class="section-title">PERLU PENDAMPINGAN</div>
+                    </div>
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NIK</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Tgl Kunjungan</th>
+                                        <th scope="col" class="text-end">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>153232424224329</td>
+                                        <td>John</td>
+                                        <td>01-06-2023</td>
+                                        <td class="text-end"><button data-toggle="modal" data-target="#modal-show" class="btn btn-sm btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                          </svg></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>153232424224329</td>
+                                        <td>John</td>
+                                        <td>01-06-2023</td>
+                                        <td class="text-end"><button data-toggle="modal" data-target="#modal-show" class="btn btn-sm btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                          </svg></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="right">
-                            <div class="price text-danger"> - $ 150</div>
-                        </div>
-                    </a>
-                    <!-- * item -->
-                    <!-- item -->
-                    <a href="app-transaction-detail.html" class="item">
-                        <div class="detail">
-                            <img src="{{ asset('assets/tpk') }}/img/sample/brand/2.jpg" alt="img" class="image-block imaged w48">
-                            <div>
-                                <strong>Apple</strong>
-                                <p>Appstore Purchase</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="price text-danger">- $ 29</div>
-                        </div>
-                    </a>
-                    <!-- * item -->
-                    <!-- item -->
-                    <a href="app-transaction-detail.html" class="item">
-                        <div class="detail">
-                            <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar3.jpg" alt="img" class="image-block imaged w48">
-                            <div>
-                                <strong>Alex Ljung</strong>
-                                <p>Transfer</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="price">+ $ 1,000</div>
-                        </div>
-                    </a>
-                    <!-- * item -->
-                    <!-- item -->
-                    <a href="app-transaction-detail.html" class="item">
-                        <div class="detail">
-                            <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar4.jpg" alt="img" class="image-block imaged w48">
-                            <div>
-                                <strong>Beatriz Brito</strong>
-                                <p>Transfer</p>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="price text-danger">- $ 186</div>
-                        </div>
-                    </a>
-                    <!-- * item -->
-                </div>
-            </div>
-            <!-- * Transactions -->
-    
-            <!-- my cards -->
-            <div class="section full mt-4">
-                <div class="section-heading padding">
-                    <h2 class="title">My Cards</h2>
-                    <a href="app-cards.html" class="link">View All</a>
-                </div>
-    
-                <!-- carousel single -->
-                <div class="carousel-single splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-    
-                            <li class="splide__slide">
-                                <!-- card block -->
-                                <div class="card-block bg-primary">
-                                    <div class="card-main">
-                                        <div class="card-button dropdown">
-                                            <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
-                                                <ion-icon name="ellipsis-horizontal"></ion-icon>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="pencil-outline"></ion-icon>Edit
-                                                </a>
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="close-outline"></ion-icon>Remove
-                                                </a>
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="arrow-up-circle-outline"></ion-icon>Upgrade
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="balance">
-                                            <span class="label">BALANCE</span>
-                                            <h1 class="title">$ 1,256,90</h1>
-                                        </div>
-                                        <div class="in">
-                                            <div class="card-number">
-                                                <span class="label">Card Number</span>
-                                                •••• 9905
-                                            </div>
-                                            <div class="bottom">
-                                                <div class="card-expiry">
-                                                    <span class="label">Expiry</span>
-                                                    12 / 25
-                                                </div>
-                                                <div class="card-ccv">
-                                                    <span class="label">CCV</span>
-                                                    553
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- * card block -->
-                            </li>
-    
-                            <li class="splide__slide">
-                                <!-- card block -->
-                                <div class="card-block bg-dark">
-                                    <div class="card-main">
-                                        <div class="card-button dropdown">
-                                            <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
-                                                <ion-icon name="ellipsis-horizontal"></ion-icon>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="pencil-outline"></ion-icon>Edit
-                                                </a>
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="close-outline"></ion-icon>Remove
-                                                </a>
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="arrow-up-circle-outline"></ion-icon>Upgrade
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="balance">
-                                            <span class="label">BALANCE</span>
-                                            <h1 class="title">$ 1,256,90</h1>
-                                        </div>
-                                        <div class="in">
-                                            <div class="card-number">
-                                                <span class="label">Card Number</span>
-                                                •••• 9905
-                                            </div>
-                                            <div class="bottom">
-                                                <div class="card-expiry">
-                                                    <span class="label">Expiry</span>
-                                                    12 / 25
-                                                </div>
-                                                <div class="card-ccv">
-                                                    <span class="label">CCV</span>
-                                                    553
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- * card block -->
-                            </li>
-    
-                            <li class="splide__slide">
-                                <!-- card block -->
-                                <div class="card-block bg-secondary">
-                                    <div class="card-main">
-                                        <div class="card-button dropdown">
-                                            <button type="button" class="btn btn-link btn-icon" data-bs-toggle="dropdown">
-                                                <ion-icon name="ellipsis-horizontal"></ion-icon>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="pencil-outline"></ion-icon>Edit
-                                                </a>
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="close-outline"></ion-icon>Remove
-                                                </a>
-                                                <a class="dropdown-item" href="javacript:;">
-                                                    <ion-icon name="arrow-up-circle-outline"></ion-icon>Upgrade
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="balance">
-                                            <span class="label">BALANCE</span>
-                                            <h1 class="title">$ 1,256,90</h1>
-                                        </div>
-                                        <div class="in">
-                                            <div class="card-number">
-                                                <span class="label">Card Number</span>
-                                                •••• 9905
-                                            </div>
-                                            <div class="bottom">
-                                                <div class="card-expiry">
-                                                    <span class="label">Expiry</span>
-                                                    12 / 25
-                                                </div>
-                                                <div class="card-ccv">
-                                                    <span class="label">CCV</span>
-                                                    553
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- * card block -->
-                            </li>
-    
-                        </ul>
+        
                     </div>
                 </div>
-                <!-- * carousel single -->
-    
-            </div>
-            <!-- * my cards -->
-    
-            <!-- Send Money -->
-            <div class="section full mt-4">
-                <div class="section-heading padding">
-                    <h2 class="title">Send Money</h2>
-                    <a href="javascript:;" class="link">Add New</a>
-                </div>
-                <!-- carousel small -->
-                <div class="carousel-small splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar2.jpg" alt="img" class="imaged w-100">
-                                        <strong>Jurrien</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar3.jpg" alt="img" class="imaged w-100">
-                                        <strong>Elwin</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar4.jpg" alt="img" class="imaged w-100">
-                                        <strong>Alma</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar5.jpg" alt="img" class="imaged w-100">
-                                        <strong>Justine</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar6.jpg" alt="img" class="imaged w-100">
-                                        <strong>Maria</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar7.jpg" alt="img" class="imaged w-100">
-                                        <strong>Pamela</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar8.jpg" alt="img" class="imaged w-100">
-                                        <strong>Neville</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar9.jpg" alt="img" class="imaged w-100">
-                                        <strong>Alex</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <div class="user-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar10.jpg" alt="img" class="imaged w-100">
-                                        <strong>Stina</strong>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- * carousel small -->
-            </div>
-            <!-- * Send Money -->
-    
-            <!-- Monthly Bills -->
-            <div class="section full mt-4">
-                <div class="section-heading padding">
-                    <h2 class="title">Monthly Bills</h2>
-                    <a href="app-bills.html" class="link">View All</a>
-                </div>
-                <!-- carousel multiple -->
-                <div class="carousel-multiple splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-    
-                            <li class="splide__slide">
-                                <div class="bill-box">
-                                    <div class="img-wrapper">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/brand/1.jpg" alt="img" class="image-block imaged w48">
-                                    </div>
-                                    <div class="price">$ 14</div>
-                                    <p>Prime Monthly Subscription</p>
-                                    <a href="#" class="btn btn-primary btn-block btn-sm">PAY NOW</a>
-                                </div>
-                            </li>
-    
-                            <li class="splide__slide">
-                                <div class="bill-box">
-                                    <div class="img-wrapper">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/brand/2.jpg" alt="img" class="image-block imaged w48">
-                                    </div>
-                                    <div class="price">$ 9</div>
-                                    <p>Music Monthly Subscription</p>
-                                    <a href="#" class="btn btn-primary btn-block btn-sm">PAY NOW</a>
-                                </div>
-                            </li>
-    
-                            <li class="splide__slide">
-                                <div class="bill-box">
-                                    <div class="img-wrapper">
-                                        <div class="iconbox bg-danger">
-                                            <ion-icon name="medkit-outline"></ion-icon>
-                                        </div>
-                                    </div>
-                                    <div class="price">$ 299</div>
-                                    <p>Monthly Health Insurance</p>
-                                    <a href="#" class="btn btn-primary btn-block btn-sm">PAY NOW</a>
-                                </div>
-                            </li>
-    
-                            <li class="splide__slide">
-                                <div class="bill-box">
-                                    <div class="img-wrapper">
-                                        <div class="iconbox">
-                                            <ion-icon name="card-outline"></ion-icon>
-                                        </div>
-                                    </div>
-                                    <div class="price">$ 962</div>
-                                    <p>Credit Card Statement
-                                    </p>
-                                    <a href="#" class="btn btn-primary btn-block btn-sm">PAY NOW</a>
-                                </div>
-                            </li>
-    
-                        </ul>
-                    </div>
-                </div>
-                <!-- * carousel multiple -->
-            </div>
-            <!-- * Monthly Bills -->
-    
-    
-            <!-- Saving Goals -->
-            <div class="section mt-4">
-                <div class="section-heading">
-                    <h2 class="title">Saving Goals</h2>
-                    <a href="app-savings.html" class="link">View All</a>
-                </div>
-                <div class="goals">
-                    <!-- item -->
-                    <div class="item">
-                        <div class="in">
-                            <div>
-                                <h4>Gaming Console</h4>
-                                <p>Gaming</p>
-                            </div>
-                            <div class="price">$ 499</div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
-                                aria-valuemin="0" aria-valuemax="100">85%</div>
-                        </div>
-                    </div>
-                    <!-- * item -->
-                    <!-- item -->
-                    <div class="item">
-                        <div class="in">
-                            <div>
-                                <h4>New House</h4>
-                                <p>Living</p>
-                            </div>
-                            <div class="price">$ 100,000</div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55"
-                                aria-valuemin="0" aria-valuemax="100">55%</div>
-                        </div>
-                    </div>
-                    <!-- * item -->
-                    <!-- item -->
-                    <div class="item">
-                        <div class="in">
-                            <div>
-                                <h4>Sport Car</h4>
-                                <p>Lifestyle</p>
-                            </div>
-                            <div class="price">$ 42,500</div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15"
-                                aria-valuemin="0" aria-valuemax="100">15%</div>
-                        </div>
-                    </div>
-                    <!-- * item -->
-                </div>
-            </div>
-            <!-- * Saving Goals -->
-    
-    
-            <!-- News -->
-            <div class="section full mt-4 mb-3">
-                <div class="section-heading padding">
-                    <h2 class="title">Lastest News</h2>
-                    <a href="app-blog.html" class="link">View All</a>
-                </div>
-    
-                <!-- carousel multiple -->
-                <div class="carousel-multiple splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-    
-                            <li class="splide__slide">
-                                <a href="app-blog-post.html">
-                                    <div class="blog-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/1.jpg" alt="image" class="imaged w-100">
-                                        <div class="text">
-                                            <h4 class="title">What will be the value of bitcoin in the next...</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-    
-                            <li class="splide__slide">
-                                <a href="app-blog-post.html">
-                                    <div class="blog-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/2.jpg" alt="image" class="imaged w-100">
-                                        <div class="text">
-                                            <h4 class="title">Rules you need to know in business</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-    
-                            <li class="splide__slide">
-                                <a href="app-blog-post.html">
-                                    <div class="blog-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/3.jpg" alt="image" class="imaged w-100">
-                                        <div class="text">
-                                            <h4 class="title">10 easy ways to save your money</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-    
-                            <li class="splide__slide">
-                                <a href="app-blog-post.html">
-                                    <div class="blog-card">
-                                        <img src="{{ asset('assets/tpk') }}/img/sample/photo/4.jpg" alt="image" class="imaged w-100">
-                                        <div class="text">
-                                            <h4 class="title">Follow the financial agenda with...</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-    
-                        </ul>
-                    </div>
-                </div>
-                <!-- * carousel multiple -->
-    
-            </div>
-            <!-- * News -->
-    
-    
-            <!-- app footer -->
-            <div class="appFooter">
-                <div class="footer-title">
-                    Copyright © Finapp 2021. All Rights Reserved.
-                </div>
-                Bootstrap 5 based mobile template.
-            </div>
-            <!-- * app footer -->
-    
         </div>
-        <!-- * App Capsule -->
-    
-    
-        <!-- App Bottom Menu -->
-        <div class="appBottomMenu">
-            <a href="index-2.html" class="item active">
-                <div class="col">
-                    <ion-icon name="pie-chart-outline"></ion-icon>
-                    <strong>Overview</strong>
-                </div>
-            </a>
-            <a href="app-pages.html" class="item">
-                <div class="col">
-                    <ion-icon name="document-text-outline"></ion-icon>
-                    <strong>Pages</strong>
-                </div>
-            </a>
-            <a href="app-components.html" class="item">
-                <div class="col">
-                    <ion-icon name="apps-outline"></ion-icon>
-                    <strong>Components</strong>
-                </div>
-            </a>
-            <a href="app-cards.html" class="item">
-                <div class="col">
-                    <ion-icon name="card-outline"></ion-icon>
-                    <strong>My Cards</strong>
-                </div>
-            </a>
-            <a href="app-settings.html" class="item">
-                <div class="col">
-                    <ion-icon name="settings-outline"></ion-icon>
-                    <strong>Settings</strong>
-                </div>
-            </a>
-        </div>
-        <!-- * App Bottom Menu -->
-    
-        <!-- App Sidebar -->
-        <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body p-0">
-                        <!-- profile box -->
-                        <div class="profileBox pt-2 pb-2">
-                            <div class="image-wrapper">
-                                <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar1.jpg" alt="image" class="imaged  w36">
-                            </div>
-                            <div class="in">
-                                <strong>Sebastian Doe</strong>
-                                <div class="text-muted">4029209</div>
-                            </div>
-                            <a href="#" class="btn btn-link btn-icon sidebar-close" data-bs-dismiss="modal">
-                                <ion-icon name="close-outline"></ion-icon>
-                            </a>
-                        </div>
-                        <!-- * profile box -->
-                        <!-- balance -->
-                        <div class="sidebar-balance">
-                            <div class="listview-title">Balance</div>
-                            <div class="in">
-                                <h1 class="amount">$ 2,562.50</h1>
-                            </div>
-                        </div>
-                        <!-- * balance -->
-    
-                        <!-- action group -->
-                        <div class="action-group">
-                            <a href="index-2.html" class="action-button">
-                                <div class="in">
-                                    <div class="iconbox">
-                                        <ion-icon name="add-outline"></ion-icon>
-                                    </div>
-                                    Deposit
-                                </div>
-                            </a>
-                            <a href="index-2.html" class="action-button">
-                                <div class="in">
-                                    <div class="iconbox">
-                                        <ion-icon name="arrow-down-outline"></ion-icon>
-                                    </div>
-                                    Withdraw
-                                </div>
-                            </a>
-                            <a href="index-2.html" class="action-button">
-                                <div class="in">
-                                    <div class="iconbox">
-                                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                                    </div>
-                                    Send
-                                </div>
-                            </a>
-                            <a href="app-cards.html" class="action-button">
-                                <div class="in">
-                                    <div class="iconbox">
-                                        <ion-icon name="card-outline"></ion-icon>
-                                    </div>
-                                    My Cards
-                                </div>
-                            </a>
-                        </div>
-                        <!-- * action group -->
-    
-                        <!-- menu -->
-                        <div class="listview-title mt-1">Menu</div>
-                        <ul class="listview flush transparent no-line image-listview">
-                            <li>
-                                <a href="index-2.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="pie-chart-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        Overview
-                                        <span class="badge badge-primary">10</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="app-pages.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="document-text-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        Pages
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="app-components.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="apps-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        Components
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="app-cards.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="card-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        My Cards
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- * menu -->
-    
-                        <!-- others -->
-                        <div class="listview-title mt-1">Others</div>
-                        <ul class="listview flush transparent no-line image-listview">
-                            <li>
-                                <a href="app-settings.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="settings-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        Settings
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="component-messages.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="chatbubble-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        Support
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="app-login.html" class="item">
-                                    <div class="icon-box bg-primary">
-                                        <ion-icon name="log-out-outline"></ion-icon>
-                                    </div>
-                                    <div class="in">
-                                        Log out
-                                    </div>
-                                </a>
-                            </li>
-    
-    
-                        </ul>
-                        <!-- * others -->
-    
-                        <!-- send money -->
-                        <div class="listview-title mt-1">Send Money</div>
-                        <ul class="listview image-listview flush transparent no-line">
-                            <li>
-                                <a href="#" class="item">
-                                    <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar2.jpg" alt="image" class="image">
-                                    <div class="in">
-                                        <div>Artem Sazonov</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="item">
-                                    <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar4.jpg" alt="image" class="image">
-                                    <div class="in">
-                                        <div>Sophie Asveld</div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="item">
-                                    <img src="{{ asset('assets/tpk') }}/img/sample/avatar/avatar3.jpg" alt="image" class="image">
-                                    <div class="in">
-                                        <div>Kobus van de Vegte</div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- * send money -->
-    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- * App Sidebar -->
-    
-    
-    
-        <!-- iOS Add to Home Action Sheet -->
-        <div class="modal inset fade action-sheet ios-add-to-home" id="ios-add-to-home-screen" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add to Home Screen</h5>
-                        <a href="#" class="close-button" data-bs-dismiss="modal">
-                            <ion-icon name="close"></ion-icon>
-                        </a>
-                    </div>
-                    <div class="modal-body">
-                        <div class="action-sheet-content text-center">
-                            <div class="mb-1"><img src="{{ asset('assets/tpk') }}/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
-                            </div>
-                            <div>
-                                Install <strong>Finapp</strong> on your iPhone's home screen.
-                            </div>
-                            <div>
-                                Tap <ion-icon name="share-outline"></ion-icon> and Add to homescreen.
-                            </div>
-                            <div class="mt-2">
-                                <button class="btn btn-primary btn-block" data-bs-dismiss="modal">CLOSE</button>
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- * iOS Add to Home Action Sheet -->
-    
-    
-        <!-- Android Add to Home Action Sheet -->
-        <div class="modal inset fade action-sheet android-add-to-home" id="android-add-to-home-screen" tabindex="-1"
-            role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add to Home Screen</h5>
-                        <a href="#" class="close-button" data-bs-dismiss="modal">
-                            <ion-icon name="close"></ion-icon>
-                        </a>
-                    </div>
-                    <div class="modal-body">
-                        <div class="action-sheet-content text-center">
-                            <div class="mb-1">
-                                <img src="{{ asset('assets/tpk') }}/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
-                            </div>
-                            <div>
-                                Install <strong>Finapp</strong> on your Android's home screen.
-                            </div>
-                            <div>
-                                Tap <ion-icon name="ellipsis-vertical"></ion-icon> and Add to homescreen.
-                            </div>
-                            <div class="mt-2">
-                                <button class="btn btn-primary btn-block" data-bs-dismiss="modal">CLOSE</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- * Android Add to Home Action Sheet -->
 @endsection
+@push('js')
+    <script type="text/javascript">
+        $(document).ready(async function dashboard() {
+            var param = {
+                method: 'GET',
+                url: '/api/tpk/data_dashboard',
+            }
+
+            await transAjax(param).then((res) => {
+                $('#data_catin').html(res.data.catin);
+                $('#data_bumil').html(res.data.bumil);
+            });
+        });
+    </script>
+@endpush
