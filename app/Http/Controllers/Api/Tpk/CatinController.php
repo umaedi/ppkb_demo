@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Api as Controller;
 use App\Services\CatinService;
-use Illuminate\Support\Facades\Auth;
 
 class CatinController extends Controller
 {
@@ -33,7 +32,7 @@ class CatinController extends Controller
         $data = $request->except('_token');
         $data['kode_catin'] = $kode_catin;
         $data['kunjungan']  = $kunjungan;
-        $data['pendamping_id'] = Auth::user()->id;
+        $data['pendamping_id'] = 1;
         $data['tgl_pendampingan'] = now();
 
         //PROSES DATA
@@ -43,7 +42,7 @@ class CatinController extends Controller
             $this->catin->store($data);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return $this->sendResponseError($th);
+            return $this->sendResponseError(json_encode($th));
         }
 
         DB::commit();

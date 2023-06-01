@@ -5,7 +5,7 @@
         </a>
     </div>
     <div class="pageTitle">
-        <img src="{{ asset('assets/tpk/img/logo.png') }}" alt="logo" class="logo">
+        {{-- <img src="{{ asset('assets/tpk/img/logo.png') }}" alt="logo" class="logo"> --}}
     </div>
     <div class="right">
         <a href="app-settings.html" class="headerButton">

@@ -265,7 +265,7 @@
                             </div>
                         </div>
                         <div class="form-group basic">
-                            @include('components._loading_submit')
+                            @include('components.btn._loading_submit')
                             <button id="btn_submit" type="submit" class="btn btn-primary btn-block btn-lg"
                             >Simpan</button>
                         </div>

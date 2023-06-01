@@ -19,7 +19,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::prefix('tpk')->group(function () {
+
+    //catin
     Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
+
+    //bumil
+    Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
 
     //data wilayah
     Route::get('/wilayah', [\App\Http\Controllers\Api\Tpk\WilayahController::class, 'index']);

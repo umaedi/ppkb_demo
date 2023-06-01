@@ -1,32 +1,32 @@
 <div class="appBottomMenu">
-    <a href="index-2.html" class="item active">
+    <a href="#" class="item active">
         <div class="col">
-            <ion-icon name="pie-chart-outline"></ion-icon>
-            <strong>Overview</strong>
+            <ion-icon name="home-outline"></ion-icon>
+            <strong>HOME</strong>
         </div>
     </a>
-    <a href="app-pages.html" class="item">
+    <a href="#" class="item">
         <div class="col">
-            <ion-icon name="document-text-outline"></ion-icon>
-            <strong>Pages</strong>
+            <ion-icon name="people-outline"></ion-icon>
+            <strong>CATIN</strong>
         </div>
     </a>
-    <a href="app-components.html" class="item">
+    <a href="#" class="item">
         <div class="col">
-            <ion-icon name="apps-outline"></ion-icon>
-            <strong>Components</strong>
+            <ion-icon name="sparkles-outline"></ion-icon>
+            <strong>PUS</strong>
         </div>
     </a>
-    <a href="app-cards.html" class="item">
+    <a href="#" class="item">
         <div class="col">
-            <ion-icon name="card-outline"></ion-icon>
-            <strong>My Cards</strong>
+            <ion-icon name="heart-outline"></ion-icon>
+            <strong>BADUTA</strong>
         </div>
     </a>
-    <a href="app-settings.html" class="item">
+    <a href="#" class="item">
         <div class="col">
-            <ion-icon name="settings-outline"></ion-icon>
-            <strong>Settings</strong>
+            <ion-icon name="person-outline"></ion-icon>
+            <strong>PROILE</strong>
         </div>
     </a>
 </div>
