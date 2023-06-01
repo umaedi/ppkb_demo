@@ -14,7 +14,7 @@
     <a href="#" class="item">
         <div class="col">
             <ion-icon name="sparkles-outline"></ion-icon>
-            <strong>PUS</strong>
+            <strong>PPS</strong>
         </div>
     </a>
     <a href="#" class="item">

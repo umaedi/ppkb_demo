@@ -10,7 +10,7 @@
                         <div class="form-group basic">
                             <div class="input-wrapper">
                                 <h5 class="modal-title">BIODATA CATIN PRIA</h5>
-                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_pria">
+                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_pria" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -19,7 +19,7 @@
 
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" id="nik" placeholder="NIK" name="nik_catin_pria">
+                                <input type="number" class="form-control" id="nik" placeholder="NIK" name="nik_catin_pria" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="text" class="form-control"  placeholder="Tempat Lahir" name="alamat_catin_pria">
+                                <input type="text" class="form-control"  placeholder="Tempat Lahir" name="alamat_catin_pria" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -36,7 +36,7 @@
                         <div class="form-group basic">
                             <div class="input-wrapper">
                                 <label for="">Tgl Lahir</label>
-                                <input type="date" class="form-control"  placeholder="Tgl Lahir" name="tgl_lahir_catin_pria">
+                                <input type="date" class="form-control"  placeholder="Tgl Lahir" name="tgl_lahir_catin_pria" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="No HP (WA)" name="telp_catin_pria">
+                                <input type="number" class="form-control" placeholder="No HP (WA)" name="telp_catin_pria" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -53,7 +53,7 @@
                         <div class="form-group basic">
                             <div class="input-wrapper">
                                 <textarea id="textarea4" rows="2" class="form-control"
-                                    placeholder="Alamat" name="alamat_catin_pria"></textarea>
+                                    placeholder="Alamat" name="alamat_catin_pria" required></textarea>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <select id="wilayah" class="form-control custom-select" name="wilayah_id">
+                                <select id="wilayah" class="form-control custom-select" name="wilayah_id" required>
                                     <option value="1">--Pilih Kecamatan--</option>
                                 </select>
                             </div>
@@ -69,7 +69,7 @@
                         <div class="form-group basic mt-3">
                             <div class="input-wrapper">
                                 <h5 class="modal-title">BIODATA CATIN WANITA</h5>
-                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_wanita">
+                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="number" class="form-control"  placeholder="NIK" name="nik_catin_wanita">
+                                <input type="number" class="form-control"  placeholder="NIK" name="nik_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir_catin_wanita">
+                                <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -93,7 +93,8 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="date" class="form-control" placeholder="Tanggal Lahir" name="tgl_lahir_catin_wanita">
+                                <label for="">Tgl Lahir</label>
+                                <input type="date" class="form-control" placeholder="Tanggal Lahir" name="tgl_lahir_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -101,7 +102,7 @@
                         </div>
                         <div class="form-group basic">
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" id="ttl" placeholder="No HP (WA)" name="telp_catin_wanita">
+                                <input type="number" class="form-control" id="ttl" placeholder="No HP (WA)" name="telp_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -110,7 +111,7 @@
                         <div class="form-group basic">
                             <div class="input-wrapper">
                                 <textarea id="textarea4" rows="2" class="form-control" name="alamat_catin_wanita"
-                                    placeholder="Alamat"></textarea>
+                                    placeholder="Alamat" required></textarea>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -119,7 +120,7 @@
                         <div class="form-group basic">
                             <div class="input-wrapper">
                                 <label for="#">Tgl Rencana Pernikahan</label>
-                                <input type="date" class="form-control" id="ttl" placeholder="Tgl Rencana Pernikahan" name="tgl_pernikahan">
+                                <input type="date" class="form-control" id="ttl" placeholder="Tgl Rencana Pernikahan" name="tgl_pernikahan" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -128,7 +129,7 @@
                         <div class="form-group basic">
                             <div class="input-wrapper">
                                 <label for="#">Tgl Kunjungan</label>
-                                <input type="date" class="form-control" id="ttl" placeholder="Tgl Kunjungan" name="kunjungan">
+                                <input type="date" class="form-control" id="ttl" placeholder="Tgl Kunjungan" name="kunjungan" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -154,37 +155,37 @@
                         <div class="form-group basic">
                             <h5 class="modal-title">HASIL PEMERIKSAAN KESEHATAN CATIN WANITA</h5>
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Berat badan (kg)" name="bb_catin_wanita">
+                                <input type="number" class="form-control" placeholder="Berat badan (kg)" name="bb_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Tinggi Badan (cm)" name="tb_catin_wanita">
+                                <input type="number" class="form-control" placeholder="Tinggi Badan (cm)" name="tb_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Index Masa Tumbuh" name="imt">
+                                <input type="number" class="form-control" placeholder="Index Masa Tumbuh" name="imt" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" id="ttl" placeholder="Kadar HB (g/dl)" name="kadar_hb">
+                                <input type="number" class="form-control" id="ttl" placeholder="Kadar HB (g/dl)" name="kadar_hb" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                             <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Ukuran Lila (cm)" name="lila">
+                                <input type="number" class="form-control" placeholder="Ukuran Lila (cm)" name="lila" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
                             <div class="wide-block p-0">
-                                <div class="section-title">Apakah Terpadar Rokok</div>
+                                <div class="section-title">Apakah Terpapar Rokok</div>
                                 <div class="input-list">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList2" value="1">
@@ -257,7 +258,7 @@
                             <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <textarea id="textarea4" rows="2" class="form-control" name="catatan_pendampingan"
-                                        placeholder="Catatan"></textarea>
+                                        placeholder="Catatan" required></textarea>
                                     <i class="clear-input">
                                         <ion-icon name="close-circle"></ion-icon>
                                     </i>
