@@ -318,6 +318,7 @@
                 });
             }).catch((err) => {
                 loadingsubmit(false);
+                $('#catinCapus').modal('hide');
                 swal({text: err.message, icon: 'error', timer: 3000,})
             });
 

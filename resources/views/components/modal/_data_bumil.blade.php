@@ -293,12 +293,13 @@
             await transAjax(param).then((res) => {
                 loadingsubmit(false);
                 swal({text: err.message, icon: 'success', timer: 3000,});
-                // $('#bumil').modal('hide');
-                // swal({text: res.message, icon: 'success', timer: 3000,}).then(() => {
-                //     window.location.href = '/tpk/dashboard';
-                // });
+                $('#bumil').modal('hide');
+                swal({text: res.message, icon: 'success', timer: 3000,}).then(() => {
+                    window.location.href = '/tpk/dashboard';
+                });
             }).catch((err) => {
                 loadingsubmit(false);
+                $('#bumil').modal('hide');
                 swal({text: err.message, icon: 'error', timer: 3000,});
             });
 
