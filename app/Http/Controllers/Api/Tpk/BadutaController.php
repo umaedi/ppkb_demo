@@ -25,7 +25,8 @@ class BadutaController extends Controller
             $kunjungan = 1;
             $kode_baduta = strtoupper(Str::random(16));
         } else {
-            $kunjungan = $data_baduta->kunjungan + 1;
+            $data_kunjungan = $data_baduta->latest()->first();
+            $kunjungan = $data_kunjungan->kunjungan + 1;
             $kode_baduta = $data_baduta->kode_baduta;
         }
 
@@ -40,7 +41,7 @@ class BadutaController extends Controller
             $this->baduta->store($data);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return $this->sendResponseError($th);
+            return $this->sendResponseError(json_encode($th));
         }
 
         DB::commit();

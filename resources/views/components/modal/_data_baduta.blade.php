@@ -15,7 +15,7 @@
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <h5 class="p-1 mb-2 bg-secondary text-white">BIODATA IBU</h5>
+                            <h5 class="p-1 mb-2 bg-secondary text-white rounded">BIODATA IBU</h5>
                             <div class="input-wrapper mb-2">
                                 <label for="nik">NIK</label>
                                 <input type="number" name="nik" class="form-control">
@@ -23,7 +23,7 @@
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <div class="input-wrapper">
+                            <div class="input-wrapper mb-2">
                                 <label for="nama">Nama</label>
                                 <input type="text" name="nama" class="form-control">
                                 <i class="clear-input">
@@ -76,7 +76,7 @@
                                 </select>
                             </div>
                             <div class="input-wrapper mb-2">
-                                <h5 class="p-1 mb-2 bg-secondary text-white">DATA BADUTA</h5>
+                                <h5 class="p-1 mb-2 bg-secondary text-white rounded">DATA BADUTA</h5>
                                 <label for="nik">NIK Anak</label>
                                 <input type="number" name="nik_baduta" id="nik" class="form-control">
                                 <i class="clear-input">
@@ -133,7 +133,7 @@
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <h5 class="p-1 mb-2 bg-secondary text-white">DATA DUKUNG LAINNYA</h5>
+                            <h5 class="p-1 mb-2 bg-secondary text-white rounded">DATA DUKUNG LAINNYA</h5>
                             <div class="input-wrapper mb-2">
                                 <label for="kehadiran_posyandu">Kehadiran Pada Posyandu</label>
                                 <select class="form-control custom-select" name="kehadiran_posyandu">
@@ -215,7 +215,7 @@
             loadingsubmit(true);
             await transAjax(param).then((res) => {
                 loadingsubmit(false);
-                swal({text: err.message, icon: 'success', timer: 3000,});
+                swal({text: res.message, icon: 'success', timer: 3000,});
                 $('#baduta').modal('hide');
                 swal({text: res.message, icon: 'success', timer: 3000,}).then(() => {
                     window.location.href = '/tpk/dashboard';

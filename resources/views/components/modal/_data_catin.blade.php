@@ -7,136 +7,116 @@
             <div class="modal-body">
                 <div class="action-sheet-content">
                     <form id="catinStore">
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <h5 class="modal-title">BIODATA CATIN PRIA</h5>
-                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_pria" required>
+                        <div class="form-group boxed">
+                            <div class="input-wrapper mb-2">
+                                <h5 class="p-1 mb-2 bg-secondary text-white rounded">BIODATA CATIN PRIA</h5>
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="name" name="nama_catin_pria" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="nik">NIK</label>
+                            <input type="number" class="form-control" id="nik" name="nik_catin_pria" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" id="nik" placeholder="NIK" name="nik_catin_pria" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="alamat_catin_pria">Tempat Lahir</label>
+                            <input type="text" class="form-control" name="alamat_catin_pria" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <input type="text" class="form-control"  placeholder="Tempat Lahir" name="alamat_catin_pria" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="tgl_lahir_catin_pria">Tgl Lahir</label>
+                            <input type="date" class="form-control" name="tgl_lahir_catin_pria" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <label for="">Tgl Lahir</label>
-                                <input type="date" class="form-control"  placeholder="Tgl Lahir" name="tgl_lahir_catin_pria" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="telp_catin_pria">No HP (WA)</label>
+                            <input type="number" class="form-control" name="telp_catin_pria" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="No HP (WA)" name="telp_catin_pria" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="textarea4">Alamat</label>
+                            <textarea id="textarea4" rows="2" class="form-control" name="alamat_catin_pria" required></textarea>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <textarea id="textarea4" rows="2" class="form-control"
-                                    placeholder="Alamat" name="alamat_catin_pria" required></textarea>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="wilayah">Kecamatan</label>
+                            <select id="wilayah" class="form-control custom-select" name="wilayah_id" required>
+                                <option value="1">--Pilih--</option>
+                            </select>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <select id="wilayah" class="form-control custom-select" name="wilayah_id" required>
-                                    <option value="1">--Pilih Kecamatan--</option>
-                                </select>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <h5 class="p-1 mb-2 bg-secondary text-white rounded">BIODATA CATIN WANITA</h5>
+                            <label for="nama_catin_wanita">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="nama_catin_wanita" name="nama_catin_wanita" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic mt-3">
-                            <div class="input-wrapper">
-                                <h5 class="modal-title">BIODATA CATIN WANITA</h5>
-                                <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" name="nama_catin_wanita" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="nik_catin_wanita">NIK</label>
+                            <input type="number" class="form-control" name="nik_catin_wanita" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control"  placeholder="NIK" name="nik_catin_wanita" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="tempat_lahir_catin_wanita">Tempat Lahir</label>
+                            <input type="text" class="form-control" name="tempat_lahir_catin_wanita" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir_catin_wanita" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="tgl_lahir_catin_wanita">Tgl Lahir</label>
+                            <input type="date" class="form-control" name="tgl_lahir_catin_wanita" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <label for="">Tgl Lahir</label>
-                                <input type="date" class="form-control" placeholder="Tanggal Lahir" name="tgl_lahir_catin_wanita" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="telp_catin_wanita">No HP (WA)</label>
+                            <input type="number" class="form-control" id="telp_catin_wanita" name="telp_catin_wanita" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" id="ttl" placeholder="No HP (WA)" name="telp_catin_wanita" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="textarea4">Alamat</label>
+                            <textarea id="textarea4" rows="2" class="form-control" name="alamat_catin_wanita"
+                             required></textarea>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <textarea id="textarea4" rows="2" class="form-control" name="alamat_catin_wanita"
-                                    placeholder="Alamat" required></textarea>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper mb-2">
+                            <label for="#">Tgl Rencana Pernikahan</label>
+                            <input type="date" class="form-control" name="tgl_pernikahan" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <label for="#">Tgl Rencana Pernikahan</label>
-                                <input type="date" class="form-control" id="ttl" placeholder="Tgl Rencana Pernikahan" name="tgl_pernikahan" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
-                        </div>
-                        <div class="form-group basic">
-                            <div class="input-wrapper">
-                                <label for="#">Tgl Kunjungan</label>
-                                <input type="date" class="form-control" id="ttl" placeholder="Tgl Kunjungan" name="kunjungan" required>
-                                <i class="clear-input">
-                                    <ion-icon name="close-circle"></ion-icon>
-                                </i>
-                            </div>
+                        <div class="input-wrapper">
+                            <label for="#">Tgl Kunjungan</label>
+                            <input type="date" class="form-control" name="kunjungan" required>
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
                         </div>
                         <div class="section full mt-2 mb-2">
-                            <h5 class="modal-title">HASIL PEMERIKSAAN KESEHATAN CATIN PRIA</h5>
+                            <h5 class="p-1 mb-2 bg-secondary text-white rounded">HASIL PEMERIKSAAN KESEHATAN CATIN PRIA</h5>
                             <div class="wide-block p-0">
                                 <div class="section-title">Apakah Merokok</div>
                                 <div class="input-list">
@@ -152,34 +132,38 @@
                 
                             </div>
                         </div>
-                        <div class="form-group basic">
-                            <h5 class="modal-title">HASIL PEMERIKSAAN KESEHATAN CATIN WANITA</h5>
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Berat badan (kg)" name="bb_catin_wanita" required>
+                            <h5 class="p-1 mb-2 bg-secondary text-white rounded">HASIL PEMERIKSAAN KESEHATAN CATIN WANITA</h5>
+                            <div class="input-wrapper mb-2">
+                                <label for="bb_catin_wanita">Berat badan (kg)</label>
+                                <input type="number" class="form-control" name="bb_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Tinggi Badan (cm)" name="tb_catin_wanita" required>
+                            <div class="input-wrapper mb-2">
+                                <label for="tb_catin_wanita">Tinggi Badan (cm)</label>
+                                <input type="number" class="form-control" name="tb_catin_wanita" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Index Masa Tumbuh" name="imt" required>
+                            <div class="input-wrapper mb-2">
+                                <label for="imt">Index Masa Tumbuh</label>
+                                <input type="number" class="form-control" name="imt" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" id="ttl" placeholder="Kadar HB (g/dl)" name="kadar_hb" required>
+                            <div class="input-wrapper mb-2">
+                                <label for="">Kadar HB (g/dl)</label>
+                                <input type="number" class="form-control" name="kadar_hb" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
                             </div>
-                            <div class="input-wrapper">
-                                <input type="number" class="form-control" placeholder="Ukuran Lila (cm)" name="lila" required>
+                            <div class="input-wrapper mb-2">
+                                <label for="lila">Ukuran Lila (cm)</label>
+                                <input type="number" class="form-control" name="lila" required>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -198,7 +182,7 @@
                                 </div>
                             </div>
                             <div class="section full mt-2 mb-2">
-                                <h5 class="modal-title">PENDAMPINGAN CATIN PRIA</h5>
+                                <h5 class="p-1 mb-2 bg-secondary text-white rounded">PENDAMPINGAN CATIN PRIA</h5>
                                 <div class="wide-block p-0">
                                     <div class="section-title">Memberikan penyuluhan/KIE</div>
                                     <div class="input-list">
@@ -214,7 +198,7 @@
                                 </div>
                             </div>
                             <div class="section full mt-2 mb-2">
-                                <h5 class="modal-title">PENDAMPINGAN CATIN WANITA</h5>
+                                <h5 class="p-1 mb-2 bg-secondary text-white rounded">PENDAMPINGAN CATIN WANITA</h5>
                                 <div class="wide-block p-0">
                                     <div class="section-title">Memberikan penyuluhan/KIE</div>
                                     <div class="input-list">
@@ -255,21 +239,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group basic">
-                                <div class="input-wrapper">
-                                    <textarea id="textarea4" rows="2" class="form-control" name="catatan_pendampingan"
-                                        placeholder="Catatan" required></textarea>
-                                    <i class="clear-input">
-                                        <ion-icon name="close-circle"></ion-icon>
-                                    </i>
-                                </div>
+                            <div class="input-wrapper mb-2">
+                                <label for="catatan_pendampingan">Catatan</label>
+                                <textarea id="catatan_pendampingan" rows="2" class="form-control" name="catatan_pendampingan"
+                                required></textarea>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
                             </div>
-                        </div>
-                        <div class="form-group basic">
+                        <div class="form-group">
                             @include('components.btn._loading_submit')
                             <button id="btn_submit" type="submit" class="btn btn-primary btn-block btn-lg"
                             >Simpan</button>
                         </div>
+                    </div>
                     </form>
                 </div>
             </div>
