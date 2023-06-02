@@ -119,7 +119,7 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">PPS</div>
-                            <div class="value text-success">20</div>
+                            <div id="data_pps" class="value text-success">0</div>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="col-6">
                         <div class="stat-box">
                             <div class="title">BADUTA</div>
-                            <div class="value"><span class="text-warning">6</span></div>
+                            <div class="value"><span class="text-warning" id="data_baduta">0</span></div>
                         </div>
                     </div>
                 </div>
@@ -190,6 +190,8 @@
             await transAjax(param).then((res) => {
                 $('#data_catin').html(res.data.catin);
                 $('#data_bumil').html(res.data.bumil);
+                $('#data_pps').html(res.data.pps);
+                $('#data_baduta').html(res.data.baduta);
             });
         });
     </script>

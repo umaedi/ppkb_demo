@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tpk.login.index');
 });
+
+Route::get('/login', [\App\Http\Controllers\Tpk\LoginController::class, 'index']);
 
 Route::prefix('tpk')->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Tpk\DashboardController::class, 'index']);

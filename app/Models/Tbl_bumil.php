@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tbl_bumil extends Model
 {
-	protected $table = 'Tbl_bumil';
+	protected $table = 'tbl_bumil';
 
 	protected $primaryKey = 'id';
 

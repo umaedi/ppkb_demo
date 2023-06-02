@@ -20,11 +20,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('tpk')->group(function () {
 
+    //login
+    Route::post('/login', [\App\Http\Controllers\Api\Tpk\LoginController::class, 'login']);
     //catin
     Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
 
     //bumil
     Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
+
+    //Pasca persalinan
+    Route::post('/pps/store', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'store']);
+
+    //baduta
+    Route::post('/baduta/store', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'store']);
 
     //data wilayah
     Route::get('/wilayah', [\App\Http\Controllers\Api\Tpk\WilayahController::class, 'index']);
