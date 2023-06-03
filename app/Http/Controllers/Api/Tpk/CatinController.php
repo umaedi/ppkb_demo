@@ -17,6 +17,13 @@ class CatinController extends Controller
         $this->catin = new CatinService($catin);
     }
 
+    public function index()
+    {
+        $catin = $this->catin->Query();
+        $data['table'] = $catin->paginate(5);
+        return view('tpk.catin._data_table', $data);
+    }
+
     public function store(Request $request)
     {
         $data_catin = $this->catin->Query()->where('nik_catin_pria', $request->nik_catin_pria)->first();

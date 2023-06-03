@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::prefix('tpk')->group(function () {
     Route::post('/login', [\App\Http\Controllers\Api\Tpk\LoginController::class, 'login']);
     //catin
     Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
+    Route::get('/catin', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'index']);
 
     //bumil
     Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);

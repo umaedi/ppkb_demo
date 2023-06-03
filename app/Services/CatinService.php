@@ -10,6 +10,11 @@ class CatinService
         $this->model = $model;
     }
 
+    public function get()
+    {
+        return $this->model->get();
+    }
+
     public function find($id)
     {
         return $this->model->find($id);
