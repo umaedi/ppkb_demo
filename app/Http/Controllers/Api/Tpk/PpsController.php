@@ -17,6 +17,14 @@ class PpsController extends Controller
         $this->pps = new PpsService($pps);
     }
 
+    public function index()
+    {
+        $pps = $this->pps->Query();
+
+        $data['table'] = $pps->paginate();
+        return view('tpk.pps._data_table', $data);
+    }
+
     public function store(Request $request)
     {
 

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Contracts\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::prefix('tpk')->group(function () {
     Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
 
     //Pasca persalinan
+    Route::get('/pps', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'index']);
     Route::post('/pps/store', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'store']);
 
     //baduta

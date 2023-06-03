@@ -169,16 +169,13 @@
                 $('#data_pps').html(res.data.pps);
                 $('#data_baduta').html(res.data.baduta);
             });
-        });
-
-        $(document).ready(function() {
             loadData();
         });
 
         async function loadData()
         {
             var param = {
-                url: '/api/tpk/catin',
+                url: '/api/tpk/pps',
                 method: 'GET',
                 data: {
                     load: 'table',

@@ -20,7 +20,13 @@ class CatinController extends Controller
     public function index()
     {
         $catin = $this->catin->Query();
-        $data['table'] = $catin->paginate(5);
+
+        $page = request()->get('paginate', 5);
+        if (\request('search')) {
+            $catin->where('nama_catin_pria', 'like', '%' . request('search') . '%')->orWhere('nama_catin_wanita', 'like', '%' . request('search') . '%');
+        }
+
+        $data['table'] = $catin->paginate($page);
         return view('tpk.catin._data_table', $data);
     }
 
