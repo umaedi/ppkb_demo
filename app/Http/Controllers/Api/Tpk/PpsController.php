@@ -21,6 +21,11 @@ class PpsController extends Controller
     {
         $pps = $this->pps->Query();
 
+        $page = request()->get('paginate', 5);
+        if (\request('search')) {
+            $pps->where('nama', 'like', '%' . request('search') . '%');
+        }
+
         $data['table'] = $pps->paginate();
         return view('tpk.pps._data_table', $data);
     }

@@ -8,14 +8,9 @@ use App\Http\Controllers\Controller;
 
 class BumilController extends Controller
 {
-    protected $catinChart;
-    public function __construct(CatinChart $catinChart)
-    {
-        $this->catinChart = $catinChart->build();
-    }
     public function index()
     {
-        $data['catinChart'] = $this->catinChart;
+        $data['title'] = 'Ibu Hamil';
         return view('tpk.bumil.index', $data);
     }
 }

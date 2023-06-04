@@ -29,6 +29,7 @@ Route::prefix('tpk')->group(function () {
     Route::get('/catin', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'index']);
 
     //bumil
+    Route::get('/bumil', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'index']);
     Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
 
     //Pasca persalinan
@@ -36,6 +37,7 @@ Route::prefix('tpk')->group(function () {
     Route::post('/pps/store', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'store']);
 
     //baduta
+    Route::get('/baduta', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'index']);
     Route::post('/baduta/store', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'store']);
 
     //data wilayah

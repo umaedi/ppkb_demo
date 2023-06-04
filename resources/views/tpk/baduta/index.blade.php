@@ -60,7 +60,7 @@
     async function loadData()
         {
             var param = {
-                url: '/api/tpk/bumil',
+                url: '/api/tpk/baduta',
                 method: 'GET',
                 data: {
                     load: 'table',

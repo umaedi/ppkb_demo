@@ -17,6 +17,19 @@ class BadutaController extends Controller
         $this->baduta = new BadutaService($baduta);
     }
 
+    public function index()
+    {
+        $baduta = $this->baduta->Query();
+
+        $page = request()->get('paginate', 5);
+        if (\request('search')) {
+            $baduta->where('nama', 'like', '%' . request('search') . '%');
+        }
+
+        $data['table'] = $baduta->paginate($page);
+        return view('tpk.bumil._data_table', $data);
+    }
+
     public function store(Request $request)
     {
         $data_baduta = $this->baduta->Query()->where('nik', $request->nik)->first();

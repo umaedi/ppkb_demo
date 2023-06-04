@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/login', [\App\Http\Controllers\Tpk\LoginController::class, 'index']);
 
 Route::prefix('tpk')->group(function () {
-    Route::get('/dashboard', [\App\Http\Controllers\Tpk\DashboardController::class, 'index']);
+    Route::get('/dashboard', [\App\Http\Controllers\Tpk\DashboardController::class, 'index'])->name('tpk.index');
 
     //catin
     Route::controller(\App\Http\Controllers\Tpk\CatinController::class)->group(function () {
@@ -29,6 +29,16 @@ Route::prefix('tpk')->group(function () {
 
     //bumil
     Route::controller(\App\Http\Controllers\Tpk\BumilController::class)->group(function () {
-        Route::get('/bumil', 'index')->name('tpk.bumil');
+        Route::get('/bumil', 'index')->name('tpk.bumil.index');
+    });
+
+    //pps
+    Route::controller(\App\Http\Controllers\Tpk\PpsController::class)->group(function () {
+        Route::get('/pps', 'index')->name('tpk.pps.index');
+    });
+
+    //baduta
+    Route::controller(\App\Http\Controllers\Tpk\BadutaController::class)->group(function () {
+        Route::get('/baduta', 'index')->name('tpk.baduta.index');
     });
 });

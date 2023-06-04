@@ -117,15 +117,17 @@
                         </a>
                     </div>
                     <div class="col-6">
-                        <div class="stat-box">
-                            <div class="title">PPS</div>
-                            <div id="data_pps" class="value text-success">0</div>
-                        </div>
+                        <a href="{{ route('tpk.pps.index') }}">
+                            <div class="stat-box">
+                                <div class="title">PPS</div>
+                                <div id="data_pps" class="value text-success">0</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-6">
-                        <a href="{{ route('tpk.bumil') }}">
+                        <a href="{{ route('tpk.bumil.index') }}">
                         <div class="stat-box">
                             <div class="title">BUMIL</div>
                             <div class="value"><span id="data_bumil" class="text-primary">0</span></div>
@@ -133,10 +135,12 @@
                         </a>
                     </div>
                     <div class="col-6">
-                        <div class="stat-box">
-                            <div class="title">BADUTA</div>
-                            <div class="value"><span class="text-warning" id="data_baduta">0</span></div>
-                        </div>
+                        <a href="{{ route('tpk.baduta.index') }}">
+                            <div class="stat-box">
+                                <div class="title">BADUTA</div>
+                                <div class="value"><span class="text-warning" id="data_baduta">0</span></div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

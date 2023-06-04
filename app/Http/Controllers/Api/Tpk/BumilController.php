@@ -18,6 +18,19 @@ class BumilController extends Controller
         $this->bumil = new BumilService($bumil);
     }
 
+    public function index()
+    {
+        $bumil = $this->bumil->Query();
+
+        $page = request()->get('paginate', 5);
+        if (\request('search')) {
+            $bumil->where('nama', 'like', '%' . request('search') . '%');
+        }
+
+        $data['table'] = $bumil->paginate($page);
+        return view('tpk.bumil._data_table', $data);
+    }
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
