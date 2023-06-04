@@ -61,4 +61,10 @@ class CatinController extends Controller
         DB::commit();
         return $this->sendResponseCreate($data);
     }
+
+    public function show($id)
+    {
+        $data['catin'] = $this->catin->find($id);
+        return view('tpk.catin._show_data', $data);
+    }
 }

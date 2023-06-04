@@ -15,6 +15,11 @@ class BadutaService
         return $this->model->create($attributes);
     }
 
+    public function find($id)
+    {
+        return $this->model->find($id);
+    }
+
     public function Query()
     {
         return $this->model->query();

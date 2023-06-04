@@ -74,6 +74,7 @@
             await transAjax(param).then((result) => {
                 loading(false);
                 $('#data-table').html(result);
+                showData();
             });
         }
 
@@ -88,6 +89,24 @@
         function loadPaginate(to) {
             page = to
             loadData();
+        }
+
+        function showData()
+        {
+            $('#showDataBumil').on('show.bs.modal', async function (e) {
+                var id = $(e.relatedTarget).data('id');
+                
+                var param = {
+                url: '/api/tpk/bumil/show/'+id,
+                method: 'GET',
+            }
+
+            // loading(true);
+            await transAjax(param).then((result) => {
+                // loading(false);
+                $('#dataBumilById').html(result);
+            });
+            });
         }
 </script>
 @endpush

@@ -1,8 +1,9 @@
-<div class="modal fade action-sheet" id="bumil" tabindex="-1" role="dialog">
+<div class="modal fade modalbox" id="bumil" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">TAMBAH DATA SASARAN BUMIL</h5>
+                <a href="javascript:;" data-bs-dismiss="modal">Close</a>
             </div>
             <div class="modal-body">
                 <div class="action-sheet-content">

@@ -24,21 +24,26 @@ Route::prefix('tpk')->group(function () {
 
     //login
     Route::post('/login', [\App\Http\Controllers\Api\Tpk\LoginController::class, 'login']);
+
     //catin
     Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
     Route::get('/catin', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'index']);
+    Route::get('/catin/show/{id}', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'show']);
 
     //bumil
     Route::get('/bumil', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'index']);
     Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
+    Route::get('/bumil/show/{id}', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'show']);
 
     //Pasca persalinan
     Route::get('/pps', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'index']);
     Route::post('/pps/store', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'store']);
+    Route::get('/pps/show/{id}', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'show']);
 
     //baduta
     Route::get('/baduta', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'index']);
     Route::post('/baduta/store', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'store']);
+    Route::get('/baduta/show/{id}', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'show']);
 
     //data wilayah
     Route::get('/wilayah', [\App\Http\Controllers\Api\Tpk\WilayahController::class, 'index']);

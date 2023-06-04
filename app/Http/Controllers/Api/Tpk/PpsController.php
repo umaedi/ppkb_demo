@@ -61,4 +61,10 @@ class PpsController extends Controller
         DB::commit();
         return $this->sendResponseCreate($data);
     }
+
+    public function show($id)
+    {
+        $data['pps'] = $this->pps->find($id);
+        return view('tpk.pps._show_data', $data);
+    }
 }

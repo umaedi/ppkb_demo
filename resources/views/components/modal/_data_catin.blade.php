@@ -1,8 +1,9 @@
-<div class="modal fade action-sheet" id="catinCapus" tabindex="-1" role="dialog">
+<div class="modal fade modalbox" id="catinCapus" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">TAMBAH DATA CATIN</h5>
+                <a href="javascript:;" data-bs-dismiss="modal">Close</a>
             </div>
             <div class="modal-body">
                 <div class="action-sheet-content">

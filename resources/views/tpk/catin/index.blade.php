@@ -157,6 +157,7 @@
             await transAjax(param).then((result) => {
                 loading(false);
                 $('#data-table').html(result);
+                showData();
             });
         }
 
@@ -171,6 +172,32 @@
         function loadPaginate(to) {
             page = to
             loadData();
+        }
+
+        function showData()
+        {
+            $('#showDataCatin').on('show.bs.modal', async function (e) {
+                var id = $(e.relatedTarget).data('id');
+                
+                var param = {
+                url: '/api/tpk/catin/show/'+id,
+                method: 'GET',
+            }
+
+            // loading(true);
+            await transAjax(param).then((result) => {
+                // loading(false);
+                $('#dataCatinById').html(result);
+            });
+            });
+
+            // function loading(state) {
+            // if(state) {
+            //     $('#loading').removeClass('d-none');
+            // } else {
+            //     $('#loading').addClass('d-none');
+            // }
+        // }
         }
 </script>
 @endpush

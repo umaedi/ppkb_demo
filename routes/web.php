@@ -25,6 +25,7 @@ Route::prefix('tpk')->group(function () {
     //catin
     Route::controller(\App\Http\Controllers\Tpk\CatinController::class)->group(function () {
         Route::get('/catin', 'index')->name('tpk.catin.index');
+        Route::get('/catin/show', 'show')->name('tpk.catin.show');
     });
 
     //bumil

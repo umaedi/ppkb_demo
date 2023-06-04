@@ -27,7 +27,7 @@ class BadutaController extends Controller
         }
 
         $data['table'] = $baduta->paginate($page);
-        return view('tpk.bumil._data_table', $data);
+        return view('tpk.baduta._data_table', $data);
     }
 
     public function store(Request $request)
@@ -59,5 +59,11 @@ class BadutaController extends Controller
 
         DB::commit();
         return $this->sendResponseCreate($data);
+    }
+
+    public function show($id)
+    {
+        $data['baduta'] = $this->baduta->find($id);
+        return view('tpk.baduta._show_data', $data);
     }
 }

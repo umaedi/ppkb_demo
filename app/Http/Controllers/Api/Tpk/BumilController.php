@@ -60,7 +60,6 @@ class BumilController extends Controller
         $data['kunjungan']  = $kunjungan;
         $data['pendamping_id'] = 1;
 
-        // Tbl_bumil::create($data);
         //PROSES DATA
         DB::beginTransaction();
 
@@ -73,5 +72,11 @@ class BumilController extends Controller
 
         DB::commit();
         return $this->sendResponseCreate($data);
+    }
+
+    public function show($id)
+    {
+        $data['bumil'] = $this->bumil->find($id);
+        return view('tpk.bumil._show_data', $data);
     }
 }
