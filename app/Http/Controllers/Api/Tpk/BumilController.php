@@ -100,7 +100,7 @@ class BumilController extends Controller
             $this->bumil->update($id, $data);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return $this->sendResponseError(json_encode($th));
+            return $this->sendResponseError(json_encode($th->getMessage()));
         }
 
         DB::commit();

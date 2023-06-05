@@ -54,7 +54,7 @@ class BadutaController extends Controller
             $this->baduta->store($data);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return $this->sendResponseError(json_encode($th));
+            return $this->sendResponseError(json_encode($th->getMessage()));
         }
 
         DB::commit();

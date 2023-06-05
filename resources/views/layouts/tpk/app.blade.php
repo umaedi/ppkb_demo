@@ -22,7 +22,7 @@
     @include('layouts.tpk.navbar')
     @yield('content')
     @include('layouts.tpk.button_action')
-    @include('layouts.tpk.sidebar')
+    {{-- @include('layouts.tpk.sidebar') --}}
 
     <!-- Bootstrap -->
     <script src="{{ asset('assets/tpk/js/lib/bootstrap.bundle.min.js') }}"></script>
@@ -32,10 +32,12 @@
     <script type="text/javascript" src="{{ asset('assets/tpk/js/sweetalert.min.js') }}"></script>
 
     <script type="text/javascript">
+        var token = localStorage.getItem('auth_token');
         async function transAjax(data) {
         html = null;
         data.headers = {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            'Authorization': `Bearer ${token}`,
         }
         await $.ajax(data).done(function(res) {
             html = res;

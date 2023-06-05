@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Tpk;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Tbl_user_tpk;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
@@ -17,19 +18,21 @@ class LoginController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json([
-                'success'   => false,
-                'message'   => 'Email dan Password Wajib Diisi!'
-            ]);
+            return response()->json(['message', 'Email atau Password Wajib Diisi!']);
         }
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            $user = auth()->user()->email;
-            $token = $user->createToken('auth_token', ['tpk'])->plainTextToken;
-            return response()->json(['access_token' => $token, 'token_type' => 'Bearer']);
+        $credentials = [
+            'email'     => $request->email,
+            'password'  => $request->password,
+        ];
+
+        if (!Auth::guard('tpk')->attempt($credentials)) {
+            return response()->json(['message', 'Email Atau Password Salah']);
         }
 
-        return response()->json(['message' => 'Email Atau Password Salah!']);
+        $tpk = Tbl_user_tpk::where('email', $request->email)->first();
+
+        $token = $tpk->createToken('auth_token', ['tpk'])->plainTextToken;
+        return response()->json(['access_token' => $token, 'token_type' => 'Bearer']);
     }
 }

@@ -8,6 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#6236FF">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title ?? 'PPKB' }}</title>
     <meta name="description" content="Finapp HTML Mobile Template">
     <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
@@ -59,6 +60,7 @@
     </div>
     <script src="{{ asset('assets/tpk/js/lib/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/tpk/js/jquery-3.4.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/tpk/js/sweetalert.min.js') }}"></script>
     <script type="text/javascript">
         async function transAjax(data) {
             html = null;
@@ -90,7 +92,10 @@
             };
 
             await transAjax(param).then((res) => {
-                console.log(res.message);
+                localStorage.setItem("auth_token", res.access_token);
+                swal({text: 'Anda berhasil login', icon: 'success', timer: 3000,}).then(() => {
+                    window.location.href = '/tpk/dashboard';
+                });
             });
         });
     </script>

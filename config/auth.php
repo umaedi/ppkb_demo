@@ -46,6 +46,11 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'tpk' => [
+            'driver' => 'session',
+            'provider' => 'tpk',
+        ],
     ],
 
     /*
@@ -69,6 +74,12 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'tpk' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Tbl_user_tpk::class,
+            'table' => 'tbl_user_tpk'
         ],
 
         // 'users' => [

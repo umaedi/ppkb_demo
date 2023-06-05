@@ -20,38 +20,42 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('tpk')->group(function () {
+//login tpk
+Route::post('/login', [\App\Http\Controllers\Api\Tpk\LoginController::class, 'login']);
 
-    //login
-    Route::post('/login', [\App\Http\Controllers\Api\Tpk\LoginController::class, 'login']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::prefix('tpk')->group(function () {
 
-    //catin
-    Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
-    Route::get('/catin', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'index']);
-    Route::get('/catin/show/{id}', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'show']);
-    Route::post('/catin/update/{id}', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'update']);
+        //login
 
-    //bumil
-    Route::get('/bumil', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'index']);
-    Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
-    Route::get('/bumil/show/{id}', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'show']);
-    Route::post('/bumil/update/{id}', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'update']);
+        //catin
+        Route::post('/catin/store', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'store']);
+        Route::get('/catin', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'index']);
+        Route::get('/catin/show/{id}', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'show']);
+        Route::post('/catin/update/{id}', [\App\Http\Controllers\Api\Tpk\CatinController::class, 'update']);
 
-    //Pasca persalinan
-    Route::get('/pps', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'index']);
-    Route::post('/pps/store', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'store']);
-    Route::get('/pps/show/{id}', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'show']);
-    Route::get('/pps/update/{id}', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'update']);
+        //bumil
+        Route::get('/bumil', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'index']);
+        Route::post('/bumil/store', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'store']);
+        Route::get('/bumil/show/{id}', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'show']);
+        Route::post('/bumil/update/{id}', [\App\Http\Controllers\Api\Tpk\BumilController::class, 'update']);
 
-    //baduta
-    Route::get('/baduta', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'index']);
-    Route::post('/baduta/store', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'store']);
-    Route::get('/baduta/show/{id}', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'show']);
-    Route::post('/baduta/update/{id}', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'update']);
+        //Pasca persalinan
+        Route::get('/pps', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'index']);
+        Route::post('/pps/store', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'store']);
+        Route::get('/pps/show/{id}', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'show']);
+        Route::get('/pps/update/{id}', [\App\Http\Controllers\Api\Tpk\PpsController::class, 'update']);
 
-    //data wilayah
-    Route::get('/wilayah', [\App\Http\Controllers\Api\Tpk\WilayahController::class, 'index']);
+        //baduta
+        Route::get('/baduta', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'index']);
+        Route::post('/baduta/store', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'store']);
+        Route::get('/baduta/show/{id}', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'show']);
+        Route::post('/baduta/update/{id}', [\App\Http\Controllers\Api\Tpk\BadutaController::class, 'update']);
 
-    //data dashboard
-    Route::get('/data_dashboard', [\App\Http\Controllers\Api\Tpk\DatadashboardController::class, 'index']);
+        //data wilayah
+        Route::get('/wilayah', [\App\Http\Controllers\Api\Tpk\WilayahController::class, 'index']);
+
+        //data dashboard
+        Route::get('/data_dashboard', [\App\Http\Controllers\Api\Tpk\DatadashboardController::class, 'index']);
+    });
 });

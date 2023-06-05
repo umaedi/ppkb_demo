@@ -83,7 +83,7 @@ class CatinController extends Controller
             $this->catin->update($id, $data);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return $this->sendResponseError($th);
+            return $this->sendResponseError(json_encode($th->getMessage()));
         }
 
         DB::commit();

@@ -19,27 +19,32 @@ Route::get('/', function () {
 
 Route::get('/login', [\App\Http\Controllers\Tpk\LoginController::class, 'index']);
 
-Route::prefix('tpk')->group(function () {
-    Route::get('/dashboard', [\App\Http\Controllers\Tpk\DashboardController::class, 'index'])->name('tpk.index');
+Route::middleware(['auth' => 'tpk'])->group(function () {
+    Route::prefix('tpk')->group(function () {
+        Route::get('/dashboard', [\App\Http\Controllers\Tpk\DashboardController::class, 'index'])->name('tpk.index');
 
-    //catin
-    Route::controller(\App\Http\Controllers\Tpk\CatinController::class)->group(function () {
-        Route::get('/catin', 'index')->name('tpk.catin.index');
-        Route::get('/catin/show', 'show')->name('tpk.catin.show');
-    });
+        //profile
+        Route::get('/profile', [\App\Http\Controllers\Tpk\ProfileController::class, 'index'])->name('tpk.profile');
 
-    //bumil
-    Route::controller(\App\Http\Controllers\Tpk\BumilController::class)->group(function () {
-        Route::get('/bumil', 'index')->name('tpk.bumil.index');
-    });
+        //catin
+        Route::controller(\App\Http\Controllers\Tpk\CatinController::class)->group(function () {
+            Route::get('/catin', 'index')->name('tpk.catin.index');
+            Route::get('/catin/show', 'show')->name('tpk.catin.show');
+        });
 
-    //pps
-    Route::controller(\App\Http\Controllers\Tpk\PpsController::class)->group(function () {
-        Route::get('/pps', 'index')->name('tpk.pps.index');
-    });
+        //bumil
+        Route::controller(\App\Http\Controllers\Tpk\BumilController::class)->group(function () {
+            Route::get('/bumil', 'index')->name('tpk.bumil.index');
+        });
 
-    //baduta
-    Route::controller(\App\Http\Controllers\Tpk\BadutaController::class)->group(function () {
-        Route::get('/baduta', 'index')->name('tpk.baduta.index');
+        //pps
+        Route::controller(\App\Http\Controllers\Tpk\PpsController::class)->group(function () {
+            Route::get('/pps', 'index')->name('tpk.pps.index');
+        });
+
+        //baduta
+        Route::controller(\App\Http\Controllers\Tpk\BadutaController::class)->group(function () {
+            Route::get('/baduta', 'index')->name('tpk.baduta.index');
+        });
     });
 });
