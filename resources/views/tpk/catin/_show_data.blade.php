@@ -3,6 +3,7 @@
         <div class="input-wrapper mb-2">
             <h5 class="p-1 mb-2 bg-secondary text-white rounded">BIODATA CATIN PRIA</h5>
             <label for="name">Nama Lengkap</label>
+            <input type="hidden" name="id" value="{{ $catin->id }}">
             <input type="text" class="form-control" id="name" name="nama_catin_pria" required value="{{ $catin->nama_catin_pria }}">
             <i class="clear-input">
                 <ion-icon name="close-circle"></ion-icon>
@@ -45,8 +46,8 @@
         </div>
         <div class="input-wrapper mb-2">
             <label for="wilayah">Kecamatan</label>
-            <select id="wilayah" class="form-control custom-select" name="wilayah_id" required>
-                <option value="1">--Pilih--</option>
+            <select id="wilayah" class="form-control custom-select" name="wilayah_id">
+                <option value="">--Pilih--</option>
             </select>
         </div>
         <div class="input-wrapper mb-2">
@@ -102,7 +103,7 @@
         </div>
         <div class="input-wrapper">
             <label for="#">Tgl Kunjungan</label>
-            <input type="date" class="form-control" name="kunjungan" required value="{{ $catin->kunjungan }}">
+            <input type="date" class="form-control" name="tgl_pendampingan" required value="{{ $catin->tgl_pendampingan }}">
             <i class="clear-input">
                 <ion-icon name="close-circle"></ion-icon>
             </i>
@@ -113,11 +114,11 @@
                 <div class="section-title">Apakah Merokok</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="merokok_pria" id="radioList1" value="1">
+                        <input class="form-check-input" type="radio" name="merokok_pria" id="radioList1" value="1" {{ $catin->merokok_pria == '1' ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList1">Ya</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="merokok_pria" id="radioList1.1" value="2">
+                        <input class="form-check-input" type="radio" name="merokok_pria" id="radioList1.1" value="2" {{ $catin->merokok_pria == '2' ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList1.1">Tidak</label>
                     </div>
                 </div>
@@ -164,11 +165,11 @@
                 <div class="section-title">Apakah Terpapar Rokok</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList2" value="1">
+                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList2" value="1" {{ $catin->merokok_pria == '1' ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList2">Ya</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList2.1" value="2">
+                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList2.1" value="2" {{ $catin->merokok_pria == '2' ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList2.1">Tidak</label>
                     </div>
                 </div>
@@ -179,11 +180,11 @@
                     <div class="section-title">Memberikan penyuluhan/KIE</div>
                     <div class="input-list">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="kie_pria" id="radioList3" value="1">
+                            <input class="form-check-input" type="radio" name="kie_pria" id="radioList3" value="1" {{ $catin->merokok_pria == '1' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList3">Ya</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="kie_pria" id="radioList3.1" value="2">
+                            <input class="form-check-input" type="radio" name="kie_pria" id="radioList3.1" value="2" {{ $catin->merokok_pria == '2' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList3.1">Tidak</label>
                         </div>
                     </div>
@@ -195,11 +196,11 @@
                     <div class="section-title">Memberikan penyuluhan/KIE</div>
                     <div class="input-list">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="kie_wanita" id="radioList4" value="1">
+                            <input class="form-check-input" type="radio" name="kie_wanita" id="radioList4" value="1" {{ $catin->merokok_pria == '1' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList4">Ya</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="kie_wanita" id="radioList4.1" value="2">
+                            <input class="form-check-input" type="radio" name="kie_wanita" id="radioList4.1" value="2" {{ $catin->merokok_pria == '2' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList4.1">Tidak</label>
                         </div>
                     </div>
@@ -208,11 +209,11 @@
                     <div class="section-title">Apakah (sasaran) sudah mendapatkan suplemen makanan?</div>
                     <div class="input-list">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="supelmen_wanita" id="radioList5" value="1">
+                            <input class="form-check-input" type="radio" name="supelmen_wanita" id="radioList5" value="1" {{ $catin->merokok_pria == '1' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList5">Ya</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="supelmen_wanita" id="radioList5.1" value="2">
+                            <input class="form-check-input" type="radio" name="supelmen_wanita" id="radioList5.1" value="2" {{ $catin->merokok_pria == '2' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList5.1">Tidak</label>
                         </div>
                     </div>
@@ -221,11 +222,11 @@
                     <div class="section-title">Memfasilitasi rujukan layanan</div>
                     <div class="input-list">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="rujukan_wanita" id="radioList6" value="1">
+                            <input class="form-check-input" type="radio" name="rujukan_wanita" id="radioList6" value="1" {{ $catin->merokok_pria == '1' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList6">Ya</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="rujukan_wanita" id="radioList6.1" value="2">
+                            <input class="form-check-input" type="radio" name="rujukan_wanita" id="radioList6.1" value="2" {{ $catin->merokok_pria == '2' ? 'checked' : '' }}>
                             <label class="form-check-label" for="radioList6.1">Tidak</label>
                         </div>
                     </div>

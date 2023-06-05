@@ -79,4 +79,31 @@ class BumilController extends Controller
         $data['bumil'] = $this->bumil->find($id);
         return view('tpk.bumil._show_data', $data);
     }
+
+    public function update(Request $request, $id)
+    {
+        $bumil = $this->bumil->find($id);
+        $data = $request->except('_token');
+
+
+        if ($data['jumlah_anak'] == null) {
+            $data['jumlah_anak'] = $bumil->jumlah_anak;
+        }
+
+        if ($data['riwayat_penyakit'] == null) {
+            $data['riwayat_penyakit'] = $bumil->riwayat_penyakit;
+        }
+
+        DB::beginTransaction();
+
+        try {
+            $this->bumil->update($id, $data);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendResponseError(json_encode($th));
+        }
+
+        DB::commit();
+        return $this->sendResponseUpdate($data);
+    }
 }

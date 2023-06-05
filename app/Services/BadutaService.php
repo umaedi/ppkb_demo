@@ -20,6 +20,13 @@ class BadutaService
         return $this->model->find($id);
     }
 
+    public function update($id, $data)
+    {
+        $model = $this->model->find($id);
+        $model->update($data);
+        return $model;
+    }
+
     public function Query()
     {
         return $this->model->query();

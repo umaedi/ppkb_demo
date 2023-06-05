@@ -66,4 +66,53 @@ class BadutaController extends Controller
         $data['baduta'] = $this->baduta->find($id);
         return view('tpk.baduta._show_data', $data);
     }
+
+    public function update(Request $request, $id)
+    {
+        $baduta = $this->baduta->find($id);
+        $data = $request->except('_token');
+
+        if ($data['penggunaan_kontrasepsi'] == null) {
+            $data['penggunaan_kontrasepsi'] = $baduta->penggunaan_kontrasepsi;
+        }
+
+        if ($data['air_minum_layak'] == null) {
+            $data['air_minum_layak'] = $baduta->air_minum_layak;
+        }
+
+        if ($data['tempat_bab_layak'] == null) {
+            $data['tempat_bab_layak'] = $baduta->tempat_bab_layak;
+        }
+
+        if ($data['jenis_kelamin'] == null) {
+            $data['jenis_kelamin'] = $baduta->jenis_kelamin;
+        }
+
+        if ($data['kehadiran_posyandu'] == null) {
+            $data['kehadiran_posyandu'] = $baduta->kehadiran_posyandu;
+        }
+
+        if ($data['penyuluhan_kie'] == null) {
+            $data['penyuluhan_kie'] = $baduta->penyuluhan_kie;
+        }
+
+        if ($data['pemberian_fasilitas_rujukan'] == null) {
+            $data['pemberian_fasilitas_rujukan'] = $baduta->pemberian_fasilitas_rujukan;
+        }
+
+        if ($data['bansos'] == null) {
+            $data['bansos'] = $baduta->bansos;
+        }
+
+        DB::beginTransaction();
+        try {
+            $this->baduta->update($id, $data);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendResponseError(json_encode($th));
+        }
+
+        DB::commit();
+        return $this->sendResponseUpdate($data);
+    }
 }

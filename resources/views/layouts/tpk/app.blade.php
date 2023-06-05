@@ -29,6 +29,8 @@
     <script src="{{ asset('assets/tpk/js/jquery-3.4.1.min.js') }}"></script>
     {{-- <script src="{{ asset('assets/tpk/js/base.js') }}"></script> --}}
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/tpk/js/sweetalert.min.js') }}"></script>
+
     <script type="text/javascript">
         async function transAjax(data) {
         html = null;

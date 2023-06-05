@@ -46,7 +46,6 @@ class CatinController extends Controller
         $data['kode_catin'] = $kode_catin;
         $data['kunjungan']  = $kunjungan;
         $data['pendamping_id'] = 1;
-        $data['tgl_pendampingan'] = now();
 
         //PROSES DATA
         DB::beginTransaction();
@@ -66,5 +65,28 @@ class CatinController extends Controller
     {
         $data['catin'] = $this->catin->find($id);
         return view('tpk.catin._show_data', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $catin = $this->catin->find($id);
+
+        $data = $request->except('_token');
+
+        if ($data['wilayah_id'] == null) {
+            $data['wilayah_id'] = $catin->wilayah_id;
+        };
+
+        DB::beginTransaction();
+
+        try {
+            $this->catin->update($id, $data);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendResponseError($th);
+        }
+
+        DB::commit();
+        return $this->sendResponseUpdate($data);
     }
 }

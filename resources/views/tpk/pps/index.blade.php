@@ -105,6 +105,7 @@
             await transAjax(param).then((result) => {
                 // loading(false);
                 $('#dataCatinById').html(result);
+                ppsUpdate();
             });
             });
 
@@ -115,6 +116,49 @@
             //     $('#loading').addClass('d-none');
             // }
         // }
+        }
+
+        function ppsUpdate()
+        {
+            $('#ppsUpdate').submit(async function store(e) {
+            e.preventDefault();
+
+            var form 	= $(this)[0]; 
+            var data 	= new FormData(form);
+            var id_pps = data.get('id');
+
+            var param = {
+                method: 'POST',
+                url: '/api/tpk/pps/update/'+id_pps,
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+            }
+
+                loadingsubmit(true);
+                await transAjax(param).then((res) => {
+                    loadingsubmit(false);
+                    $('#showDataPps').modal('hide');
+                    swal({text: res.message, icon: 'success', timer: 3000,}).then(() => {
+                        window.location.href = '/tpk/pps';
+                    });
+                }).catch((err) => {
+                    loadingsubmit(false);
+                    $('#showDataPps').modal('hide');
+                    swal({text: err.message, icon: 'error', timer: 3000,})
+                });
+
+            function loadingsubmit(state){
+                if(state) {
+                    $('#btn_loading').removeClass('d-none');
+                    $('#btn_submit').addClass('d-none');
+                }else {
+                    $('#btn_loading').addClass('d-none');
+                    $('#btn_submit').removeClass('d-none');
+                }
+            }  
+            });
         }
 </script>
 @endpush

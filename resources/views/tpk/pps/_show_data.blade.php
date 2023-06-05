@@ -2,6 +2,7 @@
     <div class="form-group boxed">
         <div class="input-wrapper mb-2">
             <label for="">NIK</label>
+            <input type="hidden" name="id" value="{{ $pps->id }}">
             <input type="number" class="form-control" name="nik" required value="{{ $pps->nik }}">
             <i class="clear-input">
                 <ion-icon name="close-circle"></ion-icon>
@@ -53,7 +54,7 @@
         <div class="input-wrapper mb-2">
             <label for="">Tempat Persalinan</label>
             <select class="form-control custom-select" name="tempat_persalinan">
-                <option value="0">--Pilih--</option>
+                <option value="">--Pilih--</option>
                 <option value="Puskesmas">Puskesmas</option>
                 <option value="Rumah Sakit">Rumah Sakit</option>
                 <option value="Bidan">Bidan</option>
@@ -63,7 +64,7 @@
         <div class="input-wrapper mb-2">
             <label for="">Penolong Persalinan</label>
             <select class="form-control custom-select" name="penolong_persalinan">
-                <option value="0">--Pilih--</option>
+                <option value="">--Pilih--</option>
                 <option value="Dokter Spesialis Kandungan">Dokter Spesialis Kandungan</option>
                 <option value="Dokter Umum">Dokter Umum</option>
                 <option value="Bidan">Bidan</option>
@@ -73,7 +74,7 @@
         <div class="input-wrapper mb-2">
             <label for="">Cara Persalinan</label>
             <select class="form-control custom-select" name="cara_persalinan">
-                <option value="0">--Pilih--</option>
+                <option value="">--Pilih--</option>
                 <option value="Normal">Normal</option>
                 <option value="Tindakan/Caesar">Tindakan/Caesar</option>
             </select>
@@ -167,11 +168,11 @@
             <div class="section-title">Memberikan penyuluhan/KIE</div>
             <div class="input-list">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.1" value="1" onclick="slectKIE()">
+                    <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.1" value="1" onclick="slectKIE()" {{ $pps->penyuluhan_kie == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="pps_kie.1">Ya</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.2" value="2" onclick="removeSUBKIE()">
+                    <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.2" value="2" onclick="removeSUBKIE()" {{ $pps->penyuluhan_kie == 2 ? 'checked' : '' }}>
                     <label class="form-check-label" for="pps_kie.2">Tidak</label>
                 </div>
             </div>
@@ -179,11 +180,11 @@
                 <div class="section-title">Jenis Penyuluhan Yang Diberikan</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.6" value="Perseorangan">
+                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.6" value="Perseorangan" {{ $pps->penyuluhan_kie == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="pps_kie.6">Perseorangan</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.7" value="Kelompk">
+                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="pps_kie.7" value="Kelompk" {{ $pps->penyuluhan_kie == 2 ? 'checked' : '' }}>
                         <label class="form-check-label" for="pps_kie.7">Kelompk</label>
                     </div>
                 </div>
@@ -193,11 +194,11 @@
             <div class="section-title">Memfasilitasi Pelayanan Rujukan</div>
             <div class="input-list">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="pps_kie3" value="1">
+                    <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="pps_kie3" value="1" {{ $pps->rujukan_pelayanan == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="pps_kie3">Ya</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="pps_kie4" value="2">
+                    <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="pps_kie4" value="2" {{ $pps->rujukan_pelayanan == 2 ? 'checked' : '' }}>
                     <label class="form-check-label" for="pps_kie4">Tidak</label>
                 </div>
             </div>
@@ -206,11 +207,11 @@
             <div class="section-title">Memfasilitasi Bantuan Sosial</div>
             <div class="input-list">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bansos" id="pps_kie5" value="1" onclick="selectBansos()">
+                    <input class="form-check-input" type="radio" name="bansos" id="pps_kie5" value="1" onclick="selectBansos()" {{ $pps->bansos == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="pps_kie5">Ya</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="bansos" id="pps_kie6" value="2" onclick="removeBansos()">
+                    <input class="form-check-input" type="radio" name="bansos" id="pps_kie6" value="2" onclick="removeBansos()" {{ $pps->bansos == 2 ? 'checked' : '' }}>
                     <label class="form-check-label" for="pps_kie6">Tidak</label>
                 </div>
             </div>

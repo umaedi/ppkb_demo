@@ -3,6 +3,7 @@
         <div class="input-wrapper">
             <h5 class="p-1 mb-2 bg-secondary text-white rounded">A. BIODATA IBU HAMIL</h5>
             <label for="">NIK</label>
+            <input type="hidden" name="id" value="{{ $bumil->id }}">
             <input type="number" class="form-control" name="nik" required value="{{ $bumil->nik }}">
             <i class="clear-input">
                 <ion-icon name="close-circle"></ion-icon>
@@ -46,7 +47,7 @@
         </div>
         <div class="input-wrapper mb-2">
             <label for="">Jumlah Anak</label>
-            <select class="form-control custom-select" name="jumlah_anak" required>
+            <select class="form-control custom-select" name="jumlah_anak">
                 <option value="">--Pilih--</option>
                 <option value="0">Belum Ada Anak</option>
                 <option value="1">Satu</option>
@@ -97,7 +98,7 @@
         </div>
         <div class="input-wrapper mb-2">
             <label for="">Riwayat Penyakit</label>
-            <select class="form-control custom-select" name="riwayat_penyakit" required>
+            <select class="form-control custom-select" name="riwayat_penyakit">
                 <option value="">--Pilih--</option>
                 <option value="Hipertensi">Hipertensi</option>
                 <option value="Kencing Manis/Diabetes">Kencing Manis/Diabetes</option>
@@ -134,11 +135,11 @@
                 <div class="section-title">Apakah Terpadar Rokok</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList7" value="1">
+                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList7" value="1" {{ $bumil->terpapar_rokok == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList7">Ya</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList7.1" value="2">
+                        <input class="form-check-input" type="radio" name="terpapar_rokok" id="radioList7.1" value="2" {{ $bumil->terpapar_rokok == 2 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList7.1">Tidak</label>
                     </div>
                 </div>
@@ -151,11 +152,11 @@
                 <div class="section-title">Memberikan Penyuluhan/KIE</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="radioList8" value="1">
+                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="radioList8" value="1" {{ $bumil->penyuluhan_kie == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList8">Ya</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="radioList8.1" value="2">
+                        <input class="form-check-input" type="radio" name="penyuluhan_kie" id="radioList8.1" value="2" {{ $bumil->penyuluhan_kie == 2 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList8.1">Tidak</label>
                     </div>
                 </div>
@@ -165,11 +166,11 @@
             <div class="section-title">Apakah Ibu Hamil Sudah Mendapatkan Suplemen Tambahan Darah</div>
             <div class="input-list">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="suplement_darah" id="radioList9" value="1">
+                    <input class="form-check-input" type="radio" name="suplement_darah" id="radioList9" value="1" {{ $bumil->suplement_darah == 1 ? 'checked' : '' }}>
                     <label class="form-check-label" for="radioList9">Ya</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="suplement_darah" id="radioList9.1" value="2">
+                    <input class="form-check-input" type="radio" name="suplement_darah" id="radioList9.1" value="2" {{ $bumil->suplement_darah == 2 ? 'checked' : '' }}>
                     <label class="form-check-label" for="radioList9.1">Tidak</label>
                 </div>
             </div>
@@ -180,11 +181,11 @@
                 <div class="section-title">Memfasilitasi Pelayanan Rujukan</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="radioList10" value="1">
+                        <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="radioList10" value="1" {{ $bumil->rujukan_pelayanan == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList10">Ya</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="radioList10.1" value="2">
+                        <input class="form-check-input" type="radio" name="rujukan_pelayanan" id="radioList10.1" value="2" {{ $bumil->rujukan_pelayanan == 2 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList10.1">Tidak</label>
                     </div>
                 </div>
@@ -196,11 +197,11 @@
                 <div class="section-title">Memfasilitasi Bantuan Sosial</div>
                 <div class="input-list">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="bansos" id="radioList11" value="1">
+                        <input class="form-check-input" type="radio" name="bansos" id="radioList11" value="1" {{ $bumil->bansos == 1 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList11">Ya</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="bansos" id="radioList11.1" value="2">
+                        <input class="form-check-input" type="radio" name="bansos" id="radioList11.1" value="2" {{ $bumil->bansos == 2 ? 'checked' : '' }}>
                         <label class="form-check-label" for="radioList11.1">Tidak</label>
                     </div>
                 </div>

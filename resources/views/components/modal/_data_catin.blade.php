@@ -55,7 +55,7 @@
                         <div class="input-wrapper mb-2">
                             <label for="wilayah">Kecamatan</label>
                             <select id="wilayah" class="form-control custom-select" name="wilayah_id" required>
-                                <option value="1">--Pilih--</option>
+                                <option value="0">--Pilih--</option>
                             </select>
                         </div>
                         <div class="input-wrapper mb-2">
@@ -261,7 +261,6 @@
     </div>
 </div>
 @push('js')
-<script type="text/javascript" src="{{ asset('assets/tpk/js/sweetalert.min.js') }}"></script>
 <script type="text/javascript">
     $(document).ready(async function wilayah() {
         var param = {

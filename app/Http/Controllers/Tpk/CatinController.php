@@ -7,14 +7,9 @@ use App\Http\Controllers\Controller;
 
 class CatinController extends Controller
 {
-    protected $catinChart;
-    public function __construct(CatinChart $catinChart)
-    {
-        $this->catinChart = $catinChart->build();
-    }
     public function index()
     {
-        $data['catinChart'] = $this->catinChart;
+        $data['title'] = 'Data Catin';
         return view('tpk.catin.index', $data);
     }
 }

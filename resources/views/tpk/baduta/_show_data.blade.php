@@ -1,7 +1,8 @@
-<form id="badutaStore">
+<form id="badutaUpdate">
     <div class="form-group boxed">
         <div class="input-wrapper mb-2">
             <label for="date">Tgl Kunjungan</label>
+            <input type="hidden" name="id" value="{{ $baduta->id }}">
             <input type="date" name="tgl_kunjungan" id="date" class="form-control" value="{{ $baduta->tgl_kunjungan }}">
             <i class="clear-input">
                 <ion-icon name="close-circle"></ion-icon>

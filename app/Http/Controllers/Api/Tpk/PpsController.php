@@ -67,4 +67,62 @@ class PpsController extends Controller
         $data['pps'] = $this->pps->find($id);
         return view('tpk.pps._show_data', $data);
     }
+
+    public function update(Request $request, $id)
+    {
+        $pps = $this->pps->find($id);
+        $data = $request->except('_token');
+
+        if ($data['tempat_persalinan'] == null) {
+            $data['tempat_persalinan'] = $pps->tempat_persalinan;
+        }
+
+        if ($data['penolong_persalinan'] == null) {
+            $data['penolong_persalinan'] = $pps->penolong_persalinan;
+        }
+
+        if ($data['cara_persalinan'] == null) {
+            $data['cara_persalinan'] = $pps->cara_persalinan;
+        }
+
+        if ($data['komplikasi_nifas'] == null) {
+            $data['komplikasi_nifas'] = $pps->komplikasi_nifas;
+        }
+
+        if ($data['jenis_komplikasi'] == null) {
+            $data['jenis_komplikasi'] = $pps->jenis_komplikasi;
+        }
+
+        if ($data['keadaan_bayi'] == null) {
+            $data['keadaan_bayi'] = $pps->keadaan_bayi;
+        }
+
+        if ($data['kb_pasca_persalinan'] == null) {
+            $data['kb_pasca_persalinan'] = $pps->kb_pasca_persalinan;
+        }
+
+        if ($data['jenis_kb'] == null) {
+            $data['jenis_kb'] = $pps->jenis_kb;
+        }
+
+        if ($data['alasan_kb'] == null) {
+            $data['alasan_kb'] = $pps->alasan_kb;
+        }
+
+        if ($data['alasan_tidak_kb'] == null) {
+            $data['alasan_tidak_kb'] = $pps->alasan_tidak_kb;
+        }
+
+        DB::beginTransaction();
+
+        try {
+            $this->pps->update($id, $data);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendResponseError(json_encode($th));
+        }
+
+        DB::commit();
+        return $this->sendResponseUpdate($data);
+    }
 }

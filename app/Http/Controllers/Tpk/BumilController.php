@@ -10,7 +10,7 @@ class BumilController extends Controller
 {
     public function index()
     {
-        $data['title'] = 'Ibu Hamil';
+        $data['title'] = 'Data Ibu Hamil';
         return view('tpk.bumil.index', $data);
     }
 }
